@@ -1,0 +1,15 @@
+(function(){
+    $(".phrase-actions-additional-button").on("click", function() {
+        var text = $(this).parent().parent().find(".phrase-additional-text");
+
+        Aria.expandingButton($(this));
+
+        if(text.hasClass("phrase-additional-text--active"))
+            text.slideUp();
+        else
+            text.slideDown();
+
+        text.toggleClass("phrase-additional-text--active");
+
+    });
+})();

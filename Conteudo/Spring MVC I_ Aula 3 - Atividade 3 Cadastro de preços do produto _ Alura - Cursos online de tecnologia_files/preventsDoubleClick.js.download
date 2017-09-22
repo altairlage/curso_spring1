@@ -1,0 +1,13 @@
+
+function doesNothing() { return false; }
+
+function disableClickForAFewSeconds(target) {
+	$(target).click(doesNothing);
+	setTimeout(function() {
+		$(target).unbind('click', doesNothing);
+	}, 5000);
+}
+
+$('.button').on('click', function(element) {
+	disableClickForAFewSeconds(element.target);
+});

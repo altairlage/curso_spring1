@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11383 -->
+<html lang="pt-BR" data-product="alura" class="gr__cursos_alura_com_br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>Spring MVC I: Aula 1 - Atividade 6 Começando com SpringMVC | Alura - Cursos online de tecnologia</title>
+	
+	
+<script type="text/javascript" src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/b5f9030682"></script><script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/nr-1044.min.js.download"></script><script type="text/javascript" async="" src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/amplitude-3.0.2-min.gz.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="https://cursos.alura.com.br/images/alura/favicon.ico">
+	
+	<link href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/video-js.fcfc2231.css">
+    <link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/video-js-resolutions.b7de6fd3.css">
+    <link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/prettify.1b9e73a7.css">
+
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/base.78b97371.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/formattedText.781e69ae.css">
+	
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/container.d7849dcf.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/classPage.21eeda42.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/menuSettings.da4e6ad5.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/alternativeList.28f54ad0.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/taskFeedback.4bdd6c19.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/markdown.19173ffa.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/finishSection.0a96466a.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/phrase.6d880b7f.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/hqexplanation.3ed41021.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/openquestion.811813bb.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/textcontent.7298b79f.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/video.45bb70c3.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/singlechoice.05e6d21d.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/music.324695f6.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/multiplechoice.9df58fa7.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/videodialog.fc98d79c.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/fillintheblank.81cde842.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/speakingpractice.5068bb32.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/pronunciationpractice.7d2876f7.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/repetition.0dac6920.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/genericVideo.2942980e.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/taskContent.000f28c0.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/taskButtons.563efe7a.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/markdownEditor.26173654.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/audioPlayer.be1ece2d.css">
+
+	
+	
+	<style type="text/css">
+		.task:before {
+			background-color: #FFE000;
+		}
+	</style>
+	
+	
+	
+	</head>
+<body data-gr-c-s-loaded="true">
+
+<section class="task" data-task-type="hqexplanation" data-task-id="11383" data-author-id="75042" data-course-code="spring-mvc-1-criando-aplicacoes-web" data-section-number="1" data-domain="cursos.alura.com.br" data-hasfeedbackanswer="false">
+	<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class="openMenu-button task-body-button "></button>
+	
+	<section class="task-body">
+		<header class="task-body-header">
+			<div class="container">
+				<h1 class="task-body-header-title">
+					<svg class="task-body-header-title-svg" aria-label="Atividade de Explicação">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+					</svg>
+					<small>06</small>
+					<span class="task-body-header-title-text"> Começando com SpringMVC</span>
+				</h1>
+				<div class="task-body-header-actions">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11383/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
+				</div>
+			</div>
+		</header>
+		<main class="task-body-main" data-should-warn="false">
+			
+
+
+
+
+
+	
+		
+
+
+
+
+<section class="hqExplanation" id="task-content">
+	<div class="container">
+	
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações"></button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o Player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="https://cursos.alura.com.br/suggestions/new/spring-mvc-1-criando-aplicacoes-web/11383/question">Sugerir Melhoria</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+		<div class="formattedText">
+			<p>Bem-vindo ao curso de SpringMVC! Neste curso estudaremos o SpringMVC e alguns dos seus módulos para resolver problemas reais. Neste curso criaremos um projeto semelhante a <strong>Casa do Código</strong>, no qual há várias peculiaridades que desenvolveremos com o SpringMVC.  </p>
+<p>SpringMVC é um framework Java e como todo projeto java, temos que configurar nosso ambiente de desenvolvimento para conseguirmos desenvolver o projeto. Neste caso, usaremos o <strong>JBoss Forge</strong>, um framework criado pela <strong>JBoss</strong> para a criação da estrutura inicial do projeto.</p>
+<p>Antes de continuarmos, baixe o JBoss Forge no site <a href="https://forge.jboss.org/" rel="nofollow">forge.jboss.org</a>, descompacte em um diretório de sua preferência e renomeie o diretório do JBoss Forge para <strong>forge</strong>. Este último passo foi feito para deixar mais simples a interação com o JBoss Forge, pois o usaremos através do terminal.</p>
+<p>Com o terminal aberto, navegue até o diretório onde está o JBoss Forge (pasta <strong>forge</strong> renomeada no passo anterior) e execute o <strong>JBoss</strong> dentro de <code>bin/forge</code>. Este executável é um terminal disponibilizado pelo JBoss Forge para que possamos configurar a estrutura inicial do projeto.</p>
+<p><strong>Atenção:</strong> O passo anterior pode demorar um pouco para ser finalizado, pois o JBoss irá carregar uma série de itens para que possamos usá-lo.</p>
+<p>Neste momento, já dentro do terminal do JBoss, podemos digitar e executar o seguinte comando para criar o projeto: <code>project-new --named casadocodigo</code>. Este comando indica para o JBoss que queremos um novo projeto (<code>project-new</code>) e que este projeto terá o nome <strong>casadocodigo</strong> (<code>--named casadocodigo</code>).</p>
+<p><strong>Observação</strong>: Nas versões mais recentes do JBoss o comando para criar um novo projeto mudou para <code>new-project</code>, ou seja, utilize o comando  <code>new-project --named casadocodigo</code> para criar o projeto caso encontre o erro:  <code>***ERROR*** No such command: project-new</code> .</p>
+<pre class="prettyprint"><code><span class="str">"** \*\*\*Success\*\*\* ** Project named 'casadocodigo' has been created!"</span></code></pre>
+<p>Sucesso! Nosso projeto inicial está criado!</p>
+<p><strong>Observação:</strong> Se verificar no site do JBoss Forge, notará que o projeto criado por este framework, é um projeto <strong>Maven-based</strong>, ou seja, um projeto baseado no <strong>Maven</strong>. Note que na pasta onde o JBoss Forge há uma nova pasta com o nome do projeto.</p>
+<p>Podemos agora abrir o eclipse e fazer os seguintes passos: Abrir a ferramenta de import, escolher que queremos importar um projeto Maven e selecionar o projeto criado com o JBoss Forge!</p>
+<ol><li><p>Clique com o direito no project explorer do Eclipse e vá até a opção de import e selecione import.</p>
+</li><li><p>Na caixa de filtro, digite <code>maven</code> para que o eclipse filtre as opções de importe e selecione <code>Existing Maven Projects</code>.  </p>
+</li><li><p>Em <code>Root Directory</code>, selecione <code>Browse</code> e navegue pelas pastas até chegar na pasta do projeto (casadocodigo). Selecione a pasta do projeto e clique em <code>Open</code>. Após isso note que o eclipse reconheceu o projeto e já exibe na listagem o <code>pom.xml</code> do projeto. Clique em <code>Finish</code>!</p>
+</li></ol>
+<p>Nosso projeto agora é listado no eclipse, com a estrutura padrão criada com o JBoss Forge.  Seu projeto deve estar parecido com a imagem abaixo:  </p>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_javaee_perspective.png" alt="Visualização do projeto na perspectiva JavaEE"></p>
+<p>Para deixarmos o projeto com um fluxo um pouco mais simples de se trabalhar e visualizar, vamos mudar a perspectiva do eclipse de <strong>Java EE</strong> para <strong>Java</strong>. Podemos fazer isso acessando os menus:  </p>
+<pre class="prettyprint"><code><span class="typ">Window</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="typ">Perspective</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="typ">Open</span><span class="pln"> </span><span class="typ">Perspective</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="typ">Other</span></code></pre>
+<p> selecionando a perspectiva <code>Java</code> e clicando em <code>ok</code> note como a estrutura do projeto é exibida de forma mais simples.  </p>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_java_perspective.png" alt="Visualização do projeto na perspectiva Java"></p>
+<p>Experimente explorar as pastas do projeto!  </p>
+<p>Com a estrutura inicial do projeto pronta, podemos começar a criar algumas páginas para podermos visualizar o projeto funcionando. Clique na pasta <code>webapp</code> do projeto e use o atalho <code>ctrl + n</code> para criarmos um novo arquivo. Na caixa de seleção que aparece, digite <code>html</code> para criarmos um arquivo HTML. Selecione a opção <strong>HTML File</strong>. Em <strong>File name</strong> digite <code>index.html</code> e clique em Finish.</p>
+<p>O código do index.html deve estar parecido com este:</p>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;title&gt;</span><span class="pln">Insert title here</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></code></pre>
+<p>Modifique o título, coloque algum código no corpo do HTML, para visualizar depois como ficou. Algo como:</p>
+<pre class="prettyprint"><code><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;title&gt;</span><span class="pln">Livros de Java, Android, iPhone, PHP, Ruby e Muito mais - Casa Do Código</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Oi</span><span class="tag">&lt;/h1&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></code></pre>
+<p>Com este último passo, estamos prontos para vermos nosso projeto funcionando, mas temos que configurar mais uma coisa, <strong>o servidor</strong>!</p>
+<p>Baixe o Tomcat (versão 7) no site da <a href="http://tomcat.apache.org/download-70.cgi" rel="nofollow">Apache</a> e descompacte em um diretório de sua preferência. Após isso, no eclipse use a barra de pesquisa na parte superior direita e procure por <code>servers</code>. Abra esta aba.  </p>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_tab_servers.png" alt="Abrindo aba servers no Eclipse"></p>
+<p>Quando a aba de servers do eclipse for aberta, clique com o direito do mouse na área da aba aberta e selecione <code>new -&gt; server</code>. Há uma lista de servidores que podemos usar, vamos selecionar o <code>Apache -&gt; Tomcat V0.7 Server</code> e clique em <code>Next</code>.O próximo passo é seleciona o diretório onde nosso Tomcat está instalado, clique em <code>Browse</code> e navegue pelas pastas até encontrar a pasta do Tomcat e selecione esta pasta e clique em <code>Finish</code>.  </p>
+<p>Nosso servidor deve ser listado na aba servers do eclipse.  Devemos agora adicionar nosso projeto no servidor. Cliquando com o botão direito sobre o servidor e selecionando a opção <code>add/remove</code> visualizamos nosso projeto na listagem.Para adiciona-lo ao servidor, basta selecionar o projeto e clicarmos em <code>add</code> e depois em <code>Finish</code>. Podemos iniciar então o servidor clicando com o direito novamente sobre o servidor e selecionando a opção <code>start</code>.</p>
+<p>Nosso projeto já está rodando no servidor, para verificar, basta acessar com um navegador a url: <code>localhost:8080/casadocodigo</code>.  </p>
+<p>Apesar de funcionar, não é esse nosso real objetivo, queremos nossa lista de livros igual a casa do código!</p>
+<p>Até o momento, não usamos nada do SpringMVC e neste ponto que sabemos que está tudo funcionando perfeitamente, podemos começar a usar o SpringMVC de fato!</p>
+<h3>Criando o primeiro controller.</h3>
+<p>Criaremos agora nosso primeiro <em>controller</em>! O <em>controller</em> é nada mais nada menos que uma classe Java, então crie uma classe com o nome de <code>HomeController</code> no pacote <code>br.com.casadocodigo.loja.controllers</code>.</p>
+<pre class="prettyprint"><code><span class="kwd">package</span><span class="pln"> br</span><span class="pun">.</span><span class="pln">com</span><span class="pun">.</span><span class="pln">casadocodigo</span><span class="pun">.</span><span class="pln">loja</span><span class="pun">.</span><span class="pln">controllers</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">HomeController</span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>O que temos aqui não é nada mais que uma simples classe java. Nós ainda não dissemos para o SpringMVC que esta classe é um <em>controller</em>! Podemos fazer esta definição de duas formas:    1. Usando regras de XML.    2. Usando anotaçoes Java.  </p>
+<p>Por questões de simplicidade, usaremos a segunda forma, para isto só precisamos adicionar a anotação <code>@Controller</code> logo acima da definição da nossa classe:  </p>
+<pre class="prettyprint"><code><span class="kwd">package</span><span class="pln"> br</span><span class="pun">.</span><span class="pln">com</span><span class="pun">.</span><span class="pln">casadocodigo</span><span class="pun">.</span><span class="pln">loja</span><span class="pun">.</span><span class="pln">controllers</span><span class="pun">;</span><span class="pln">
+
+</span><span class="lit">@Controller</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">HomeController</span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>Note que apesar de termos feito todos estes passos, o Eclipse marca de vermelho a anotação <code>@Controller</code>, como se ele não entendesse a anotação. Isso acontece porque em momento nenhum configuramos o SpringMVC para nosso projeto. Para isso precisamos declarar algumas dependências no arquivo <code>pom.xml</code> para que o Maven baixe e configure o SpringMVC para o nosso projeto.</p>
+<p>Abra o arquivo <code>pom.xml</code> e na aba <code>pom.xml</code> cole as dependências do projeto logo a baixo do fechamento da tag <code>&lt;properties&gt;</code>.</p>
+<pre class="prettyprint"><code><span class="tag">&lt;dependencies&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">org.springframework</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">spring-webmvc</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">4.1.0.RELEASE</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">org.apache.tomcat</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">tomcat-servlet-api</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">7.0.30</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;scope&gt;</span><span class="pln">provided</span><span class="tag">&lt;/scope&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">javax.servlet.jsp</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">jsp-api</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">2.1</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;scope&gt;</span><span class="pln">provided</span><span class="tag">&lt;/scope&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">javax.servlet.jsp.jstl</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">jstl-api</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">1.2</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;exclusions&gt;</span><span class="pln">
+            </span><span class="tag">&lt;exclusion&gt;</span><span class="pln">
+                </span><span class="tag">&lt;groupId&gt;</span><span class="pln">javax.servlet</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+                </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">servlet-api</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/exclusion&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/exclusions&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">org.glassfish.web</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">jstl-impl</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">1.2</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;exclusions&gt;</span><span class="pln">
+            </span><span class="tag">&lt;exclusion&gt;</span><span class="pln">
+                </span><span class="tag">&lt;groupId&gt;</span><span class="pln">javax.servlet</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+                </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">servlet-api</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/exclusion&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/exclusions&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">org.slf4j</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">slf4j-api</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">1.6.1</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">org.slf4j</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">jcl-over-slf4j</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">1.6.1</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;scope&gt;</span><span class="pln">runtime</span><span class="tag">&lt;/scope&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">org.slf4j</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">slf4j-log4j12</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">1.6.1</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;scope&gt;</span><span class="pln">runtime</span><span class="tag">&lt;/scope&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+    </span><span class="tag">&lt;dependency&gt;</span><span class="pln">
+        </span><span class="tag">&lt;groupId&gt;</span><span class="pln">log4j</span><span class="tag">&lt;/groupId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;artifactId&gt;</span><span class="pln">log4j</span><span class="tag">&lt;/artifactId&gt;</span><span class="pln">
+        </span><span class="tag">&lt;version&gt;</span><span class="pln">1.2.16</span><span class="tag">&lt;/version&gt;</span><span class="pln">
+        </span><span class="tag">&lt;scope&gt;</span><span class="pln">runtime</span><span class="tag">&lt;/scope&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/dependency&gt;</span><span class="pln">
+</span><span class="tag">&lt;/dependencies&gt;</span></code></pre>
+<p>Salve o <code>pom.xml</code> e aguarde um momento, o Maven deverá baixar e configurar as dependências do nosso projeto. Um novo diretório chamado <code>Maven Dependencies</code> deve aparecer no projeto (Isso pode demorar um pouco já que o Maven irá baixar as dependências).</p>
+<p>Tudo parece funcionar perfeitamente! Vamos agora criar um metodo em nossa classe que será responsável por atender as requisições que chegam na página inicial do nosso projeto, ou seja, o endereço raiz ("/"). Em nosso controller teremos o código:<strong>Observação:</strong> Lembre-se de fazer os imports necessários (Atalho: Ctrl + Shift + O)</p>
+<pre class="prettyprint"><code><span class="pun">[...]</span><span class="pln">
+</span><span class="lit">@Controller</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">HomeController</span><span class="pun">{</span><span class="pln">
+
+    </span><span class="lit">@RequestMapping</span><span class="pun">(</span><span class="str">"/"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> index</span><span class="pun">(){</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Entrando na home da CDC"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>Uma novidade em nosso código é a anotação <code>@RequestMapping</code>, que tem a função de definir que aquele metodo atende a um determinado <code>path</code> ou endereço. Neste caso estamos definindo que o metodo <code>index</code> atenderá as requisições que chegarem na raiz do nosso projeto <code>("/")</code>.Se entrarmos em nosso projeto agora, deveriamos visualizar a mensagem do escrita no <code>System.out.println</code> certo? Ainda não!</p>
+<p>Em nenhum momento até agora, configuramos o SpringMVC para atender as requisições que chegam para nossa aplicação. Se acessarmos atravéz do navegador o nosso projeto, veremos a mensagem de <code>Oi</code> que fizemos no arquivo <code>index.html</code>.</p>
+<p>Existem duas formas de configurarmos o servidor Tomcat para que ele passe as requisições para o SpringMVC:    1. Usando o Servets
+    2. Usando os Filtros</p>
+<p>Usaremos a primeira opção, pois o SpringMVC já vem com um <code>servlet</code> pronto para utilizarmos como <code>servlet</code> de configuração. Podemos configura-lo através de XML ou código Java e mais uma vez usaremos código java!</p>
+<p>Crie uma nova classe dentro do pacote <code>br.com.casadocodigo.loja.conf</code> chamada de <code>ServletSpringMVC</code>. Com a classe criada, faça ela extender a classe: <strong>AbstractAnnotationConfigDispatcherServletInitializer</strong>.</p>
+<pre class="prettyprint"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">ServletSpringMVC</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">AbstractAnnotationConfigDispatcherServletInitializer</span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>A classe <code>ServletSpringMVC</code> parece estar com erros agora que extendemos a classe do SpringMVC. A classe do SpringMVC contém alguns métodos que precisamos implementar! Clique sobre o nome da Classe <code>ServletSpringMVC</code> use o atalho <code>Ctrl + 1</code> e selecione a opção: <code>Add Unimplemented Methods</code>. Veja que o Eclipse completou nossa classe com alguns metodos:</p>
+<pre class="prettyprint"><code><span class="lit">@Override</span><span class="pln">
+</span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">Class</span><span class="pun">&lt;?&gt;[]</span><span class="pln"> getRootConfigClasses</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="lit">@Override</span><span class="pln">
+</span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">Class</span><span class="pun">&lt;?&gt;[]</span><span class="pln"> getServletConfigClasses</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="lit">@Override</span><span class="pln">
+</span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">String</span><span class="pun">[]</span><span class="pln"> getServletMappings</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Implementaremos os dois últimos metodos. O <strong>getServletConfigClasses</strong> pede um <code>array</code> de classes de configurações, que ainda não temos, mas que iremos criar depois. O <strong>getServletMappings</strong> pede um <code>array</code> com os mapeamentos que queremos que nosso servlet atenda. Nossa implementação ficará assim:</p>
+<pre class="prettyprint"><code><span class="lit">@Override</span><span class="pln">
+</span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">Class</span><span class="pun">&lt;?&gt;[]</span><span class="pln"> getServletConfigClasses</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Class</span><span class="pun">[]</span><span class="pln"> </span><span class="pun">{</span><span class="typ">AppWebConfiguration</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">};</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="lit">@Override</span><span class="pln">
+</span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">String</span><span class="pun">[]</span><span class="pln"> getServletMappings</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">String</span><span class="pun">[]</span><span class="pln"> </span><span class="pun">{</span><span class="str">"/"</span><span class="pun">};</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Como estas configurações estamos definindo que o <code>servlet</code> do SpringMVC atenderá as requisições a partir da raiz do nosso projeto <code>(/)</code> e que a classe <code>AppWebConfiguration</code> será usada como classe de configuração do servlet do SpringMVC.Crie a classe <code>AppWebConfiguration</code> no pacote <code>br.com.casadocodigo.loja.conf</code>.</p>
+<p>Na classe <code>AppWebConfiguration</code> nós precisamos usar o recurso de Web MVC do SpringMVC. Podemos fazer isso através de mais uma anotação. Antes da declaração da classe devemos adicionar a anotação: <code>@EnableWebMvc</code>.</p>
+<pre class="prettyprint"><code><span class="lit">@EnableWebMvc</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">AppWebConfiguration</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>Precisamos também configurar o caminho (pacote) onde o SpringMVC irá encontrar os nossos <em>controllers</em>! Mais uma anotação para esta configuração é necessária: <code>@ComponentScan</code>.Isso somente não resolve nosso problema, o <strong>ComponentScan</strong> precisa saber onde procurar os nossos <code>controllers</code> e podemos indicar isso passando um paramêtro. Exitem duas possibilidades:1. <code>@ComponentScan(basePackages={""})</code> que recebe um array de <strong>Strings</strong> com os nomes dos pacotes onde o SpringMVC pode encontrar os <code>controllers</code>.  </p>
+<ol><li><code>@ComponentScan(basePackageClasses={})</code> que recebe um array de <strong>classes</strong> de onde o SpringMVC pode extrair os pacotes nos quais ele pode encontrar os <code>controllers</code>.</li></ol>
+<p>A segunda opção é a melhor escolha, pois podemos passar classes que estão no mesmo pacote dos <code>controllers</code> e assim o SpringMVC descobre o pacote de forma automática, diferente da primeira opção, que é mais manual.Com a primeira opção, caso o pacote mude, temos que lembrar de modificar essa configuração também.Para a segunda opção, passaremos então nossa classe <code>HomeController</code>. Assim o SpringMVC descobre o pacote desta classe e pode encontrar os outros controllers automáticamente.</p>
+<pre class="prettyprint"><code><span class="lit">@EnableWebMvc</span><span class="pln">
+</span><span class="lit">@ComponentScan</span><span class="pun">(</span><span class="pln">basePackageClasses</span><span class="pun">={</span><span class="typ">HomeController</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">})</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">AppWebConfiguration</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>Se iniciarmos nosso servidor agora, devemos ter alguma mudança visível em nossa aplicação! Acessando-a pelo navegador (em <code>localhost:8080/casadocodigo</code>) temos:</p>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_error_404.png" alt="Home com erro  404"></p>
+<p><strong>Erro 404</strong>! Porque? O que aconteceu? Nossas configurações estão todas certas e aparentemente o projeto não funcionou! Acontece que o SpringMVC está com um conflito de recursos, nós mapeamos a rota "/", mas o servidor por padrão, quando recebe uma requisição para o "/" ele retorna o <code>index</code> que estiver naquele endereço!Para resolvermos isso, basta deletar o arquivo <code>index.html</code>. Atualizando a página teremos:  </p>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_error_500.png" alt="Home com erro 500 (no view name)"></p>
+<p><strong>Erro 500</strong>! O que aconteceu agora? veja a mensagem de erro: <code>javax.servlet.ServletException: Could not resolve view with name '' in servlet with name 'dispatcher'</code>. O SpringMVC está procurando uma <code>view</code> de nome vazio?
+Note que no log do Eclipse que nossa mensagem no <code>System.out.println</code> do método <code>index</code> foi impressa! Isso indica que o SpringMVC chamou nosso metodo <code>index</code>. Mesmo assim ele continua com o erro dizendo que não encontrou uma <em>view</em>.</p>
+<p>Vamos modificar nosso controler para retornar a <code>view</code> que o SpringMVC espera receber. No nosso <code>HomeController</code> modificamos o metodo <code>index</code> para ficar da seguinte forma:</p>
+<pre class="prettyprint"><code><span class="lit">@RequestMapping</span><span class="pun">(</span><span class="str">"/"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> index</span><span class="pun">(){</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Entrando na home da CDC"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="str">"home.jsp"</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Agora estamos retornando uma String que representa o nome da <em>view</em>. Se atualizarmos no navegador a página do nosso projeto, podemos visualizar que o erro mudou! Ainda é um <strong>erro 500</strong> mas desta vez o SpringMVC identifica a <code>view</code> que foi retornada pelo método: <code>home.jsp</code>.  </p>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_error_500_with_view_name.png" alt="Erro 500 com nome da view impressa"></p>
+<p>Apesar de termos retornado uma view, não temos esta <em>view</em> criada ainda! Crie então o <code>home.jsp</code> dentro da pasta <code>webapp</code> do seu projeto (Use os atalhos do Eclipse). Seu <code>home.jsp</code> deve ficar parecido com este:</p>
+<pre class="prettyprint"><code><span class="pun">&lt;%@</span><span class="pln"> page language</span><span class="pun">=</span><span class="str">"java"</span><span class="pln"> contentType</span><span class="pun">=</span><span class="str">"text/html; charset=UTF-8"</span><span class="pln">
+    pageEncoding</span><span class="pun">=</span><span class="str">"UTF-8"</span><span class="pln">%&gt;
+</span><span class="dec">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">http-equiv</span><span class="pun">=</span><span class="atv">"Content-Type"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"text/html; charset=UTF-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;title&gt;</span><span class="pln">Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+    </span><span class="tag">&lt;h1&gt;</span><span class="pln">Casa do Código</span><span class="tag">&lt;/h1&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></code></pre>
+<p>Apenas este passo não resolve nosso problema, pois o SpringMVC ainda não sabe onde encontrar as <em>views</em> do nosso projeto. Antes de fazermos esta configuração, vamos fazer algumas modificações por questões de boas práticas.    1. Crie uma pasta dentro de <code>webapp</code> chamada <code>WEB-INF</code>.    2. Crie uma pasta dentro de <code>WEB-INF</code> chamada <code>views</code>.    3. Mova o arquivo <code>home.jsp</code> para dentro da pasta <code>views</code>.  </p>
+<p>A pasta <code>WEB-INF</code> é uma pasta protegida pelo servidor. Este que não permite que os arquivos dentro dela sejam acessados diretamente. É uma boa prática que deixemos nossas <em>views</em> dentro desta pasta para que o usuário não consiga acessar as páginas de forma direta, sem que ele passe pelo controller, pois se a <em>view</em> for acessada sem passar pelo <em>controller</em>, podemos ter quebra de regras negócio para aquela <em>view</em>.</p>
+<p>Nosso próximo passo é configurar o projeto para que o SpringMVC consiga encontrar as <em>views</em>. Essa configuração é feita na classe de configuração <code>AppWebConfiguration</code>. Nesta criaremos um novo metodo que ajudará o SpringMVC a encontrar nossas <em>views</em>:</p>
+<pre class="prettyprint"><code><span class="lit">@Bean</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="typ">InternalResourceViewResolver</span><span class="pln"> internalResourceViewResolver</span><span class="pun">(){</span><span class="pln">
+    </span><span class="typ">InternalResourceViewResolver</span><span class="pln"> resolver </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">InternalResourceViewResolver</span><span class="pun">();</span><span class="pln">
+    resolver</span><span class="pun">.</span><span class="pln">setPrefix</span><span class="pun">(</span><span class="str">"/WEB-INF/views/"</span><span class="pun">);</span><span class="pln">
+    resolver</span><span class="pun">.</span><span class="pln">setSuffix</span><span class="pun">(</span><span class="str">".jsp"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> resolver</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Este método na classe <code>AppWebConfiguration</code> retorna um objeto do tipo <strong>InternalResourceViewResolver</strong> (Resolvedor Interno de Recursos de View) que ajuda o SpringMVC a encontrar as <em>views</em>. O <code>setPrefix</code> define o caminho onde estão nossas <em>views</em>, já o <code>setSuffix</code> adiciona a extenção dos arquivos de <em>view</em>.  </p>
+<p>Note que no final do caminho das <em>views</em> há uma barra "/", ela poderia não estar ai, mas caso não estivesse, teriamos que lembrar que sempre que quisessemos retornar uma <em>view</em>, teriamos que no <em>controller</em>, no retorno da <em>view</em> escrever algo como: <code>return "/pagina.jsp"</code>, então colocamos esta barra já na configuração para não termos que nos preocupar com isto.</p>
+<p>A anotação <code>@Bean</code> é para que o retorno da chamada deste metódo possa ser gerenciada pelo SpringMVC, sem ela nossa configuração não funciona. Outra observação válida é que já estamos colocando o sufixo dos arquivos (.jsp). Desta forma, não precisamos colocar a extenção dos arquivos de <em>view</em> nos controllers. Sendo assim, modifique o <code>HomeController</code> para retornar apenas <code>"home"</code> em vez de <code>"home.jsp"</code></p>
+<p>Com essas configurações feitas, podemos agora visualizar a página inicial do projeto sem mais problemas.
+Experimente pôr mais alguns elementos na <code>home.jsp</code>, como por exemplo uma tabela que pode listar alguns livros da casa do código! Algo como:</p>
+<pre class="prettyprint"><code><span class="pun">[...]</span><span class="pln">
+</span><span class="str">&lt;h1&gt;</span><span class="typ">Casa</span><span class="pln"> </span><span class="kwd">do</span><span class="pln"> C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">&lt;</span><span class="str">/h1&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;TDD na Prática - JAVA&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span><span class="pln">
+        </span><span class="str">&lt;td&gt;</span><span class="typ">Google</span><span class="pln"> </span><span class="typ">Android</span><span class="pun">&lt;</span><span class="str">/td&gt;
+     &lt;/</span><span class="pln">tr</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="str">&lt;tr&gt;</span><span class="pln">
+        </span><span class="str">&lt;td&gt;</span><span class="typ">Certifica</span><span class="pun">çã</span><span class="pln">o OCJP</span><span class="pun">&lt;</span><span class="str">/td&gt;
+        &lt;td&gt;Java 8 Prático&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="pun">&lt;</span><span class="str">/tr&gt;
+&lt;/</span><span class="pln">table</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="pun">[...]</span></code></pre>
+<p><img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_1_1_app_with_list_books.png" alt="Página inicial com tabela de livros"></p>
+
+		</div>
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+				
+
+
+
+<section class="task-actions">
+	<div class="container">
+		
+
+
+
+
+
+<a href="https://cursos.alura.com.br/forum/curso-spring-mvc-1-criando-aplicacoes-web/exercicio-comecando-com-springmvc/11383/novo" class=" task-actions-button task-actions-button-forum" data-amplitude-onsubmit="{&quot;name&quot;:&quot;help-needed&quot;,&quot;course-code&quot;:&quot;spring-mvc-1-criando-aplicacoes-web&quot;,&quot;task-id&quot;:&quot;11383&quot;,&quot;task-kind&quot;:&quot;Explicação&quot;}">Tirar Dúvida</a><!--
+		 --><a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11383/next" class="task-actions-button task-body-actions-button task-actions-button-next">Próxima Atividade</a>
+	</div>
+</section>
+			
+		</main>
+	</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+<aside class="task-menu" style="position: fixed; transform: translateY(-789.156px);">
+	<section class="task-menu-header">
+		<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class="openMenu-button task-menu-button "></button>
+		<div class="task-menu-header-info">
+			<a class="task-menu-header-info-title" href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web" title="Ir para página do curso">
+				<img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/spring-mvc-1-criando-aplicacoes-web.svg" alt="ícone Spring MVC I: Criando aplicações web" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px">
+				<h2 class="task-menu-header-info-title-text">Spring MVC I: Criando aplicações web</h2>
+			</a>
+			<div class="task-menu-header-info-progress">
+				
+				<span class="task-menu-header-info-progress-percentage ">3%</span>
+				<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 3%, transparent 3%);"></span>
+			</div>
+		</div>
+	</section>
+	
+	<section class="task-menu-section">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>01</strong>
+				<span>de 14</span></span>
+			<h3 class="task-menu-section-title-text">
+				Começando com SpringMVC
+			</h3>
+		</div>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			Atividades
+			<span>6 de 15</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11378" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Vídeo 1">
+							Vídeo 1
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">03min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11379" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Vídeo 2">
+							Vídeo 2
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">02min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11380" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Vídeo 3">
+							Vídeo 3
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">12min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11381" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Vídeo 4">
+							Vídeo 4
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">18min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11382" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Vídeo 5">
+							Vídeo 5
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">15min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11383" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">06</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Começando com SpringMVC">
+							Começando com SpringMVC
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/29434" class="task-menu-nav-item-link task-menu-nav-item-link-TEXT_CONTENT">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Atividade sem Resposta do Aluno não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#TEXT_CONTENT"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">07</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Avaliando o projeto gerado pelo JBoss Forge">
+							Avaliando o projeto gerado pelo JBoss Forge
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11385" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">08</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Criando o projeto usando o JBOSS Forge">
+							Criando o projeto usando o JBOSS Forge
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11386" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">09</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Criando nossa página inicial">
+							Criando nossa página inicial
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11387" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">10</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Configurando o nosso servidor">
+							Configurando o nosso servidor
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11388" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">11</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Adicionando o spring ao nosso projeto">
+							Adicionando o spring ao nosso projeto
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11389" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">12</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Criando nosso primeiro controller">
+							Criando nosso primeiro controller
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11390" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">13</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Configurando o servidor para usar o Spring MVC">
+							Configurando o servidor para usar o Spring MVC
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11391" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">14</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Configurando diretório de views">
+							Configurando diretório de views
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11392" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">15</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Criando nossa primeira view">
+							Criando nossa primeira view
+						</span>
+						
+					</span></a>
+				</li>
+			
+		</ul>
+	</nav>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aulas
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href=&#39;/course/spring-mvc-1-criando-aplicacoes-web/section/&#39;+this.value;">
+			
+				<option value="1" selected="">01. Começando com SpringMVC</option>
+			
+				<option value="2">02. Cadastro de produtos</option>
+			
+				<option value="3">03. Cadastro de preços do produto</option>
+			
+				<option value="4">04. Listando os produtos</option>
+			
+				<option value="5">05. Redirect com Escopo de Flash</option>
+			
+				<option value="6">06. Validação e conversão de dados</option>
+			
+				<option value="7">07. Mais Validações </option>
+			
+				<option value="8">08. Formatação de datas</option>
+			
+				<option value="9">09. Enviando arquivos ao servidor</option>
+			
+				<option value="10">10. Url amigáveis</option>
+			
+				<option value="11">11. Expondo atributos no jsp</option>
+			
+				<option value="12">12. Escopo sessão</option>
+			
+				<option value="13">13. Carrinho de compras</option>
+			
+				<option value="14">14. Finalizando o carrinho</option>
+			
+		</select>
+	</section>
+	<section class="task-menu-others">
+		<h2 class="task-menu-others-title ">
+			Outros Links
+		</h2>
+		<a href="https://cursos.alura.com.br/forum/curso-spring-mvc-1-criando-aplicacoes-web/todos" class="task-menu-others-link task-menu-others-link-forum " title="Ir para o fórum do curso">Fórum</a>
+		<a href="https://cursos.alura.com.br/dashboard" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
+	</section>
+	<section class="task-menu-footer">
+		<a class="task-menu-footer-user" href="https://cursos.alura.com.br/user/altair-lage" title="Ir para sua página de usuário">
+			<img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/846d7bad034e3c292bc8e433e11b4683.png" alt="Gravatar de Altair Lage" class="task-menu-footer-img" width="40px" height="40px">
+			
+				<p class="task-menu-footer-detalhes">
+					<span class="task-menu-footer-detalhes-nome">Altair Lage</span>
+					<span class="task-menu-footer-detalhes-xp">
+						24.7k xp
+					</span>
+				</p>
+			
+			<input type="hidden" value="">
+			<input type="hidden" value="">
+		</a>
+		<a href="https://cursos.alura.com.br/dashboard" class="task-menu-footer-logo">
+			<img src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/icon-menu-alura.svg" alt="Logo da Alura" class="task-menu-footer-logo-image" width="19px" height="32px" title="Ir para a página principal">
+		</a>
+	</section>
+</aside>
+</section>
+
+
+
+
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/jquery-2.1.3.min.32015dd4.js.download"></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/buttonToggle.83185c05.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/sectionMenu.ba849510.js.download" async=""></script>
+
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/marked.98ce0051.js.download"></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/markdownEditor.f940de44.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/caret.637d95c2.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/keydownWatchers.67f33811.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/prettify.4992e3fe.js.download" async=""></script>
+
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/preventsDoubleClick.0a7a943f.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/assessment.050f656f.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/login-form.1730703f.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/classPage.6753ca8e.js.download"></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/aria.0b529edd.js.download"></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/phrase.80dcd2b8.js.download"></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/feedback.2d335882.js.download"></script>
+	
+	
+
+	
+	
+	
+	
+
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/partitura.977fb5b2.js.download"></script>
+	<script src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/audioProgress.6f445a1c.js.download"></script>
+
+	
+	
+	
+		
+
+<script type="text/javascript" src="./Spring MVC I_ Aula 1 - Atividade 6 Começando com SpringMVC _ Alura - Cursos online de tecnologia_files/amplitude.f1f6e4b7.js.download"></script>
+
+<script>
+
+	amplitudeInit("84647047775d06b4051d80eccd387bd3");
+	
+	
+		var userProperties = {"name":"Altair Lage","email":"altair.lage@datablink.com"};
+		amplitudeIdentify("75042", userProperties);
+	
+	
+	
+
+	
+	
+	$('[data-amplitude]').on('click', function(){
+		var data = $(this).data().amplitude;
+		track(data);
+	});
+	
+</script>
+
+		
+		
+			<script>
+				track({"name":"task-seen","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11383","task-kind":"Explicação"});
+			</script>
+		
+	
+	
+ 
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"b5f9030682","agent":"","beacon":"bam.nr-data.net","applicationTime":49,"applicationID":"12544460","transactionName":"ZVFTNhEEXEdTWkdeV1wbchcQEV1ZHVtBGVtdWR8BAgBeQV8XVFlZQEFCTAsEQFhXQEJCUVxaHwEMC0ZGXVVfUkocZ1QBFwxdWnFWXUNKXVhdBxFKQVxdTmdWS1k=","queueTime":0}</script>
+
+</body><object id="79093bab-1a48-8181-78f9-589a7b82aca6" width="0" height="0" type="application/gas-events-uni"></object></html>

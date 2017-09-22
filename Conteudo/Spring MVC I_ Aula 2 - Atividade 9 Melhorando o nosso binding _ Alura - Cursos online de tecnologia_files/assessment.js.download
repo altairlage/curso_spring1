@@ -1,0 +1,11 @@
+var courseRatingFloat = parseFloat($('.assesments-content-correctnessGrade').text());
+var courseRatingDecimalPart = courseRatingFloat % 1;
+courseRatingFloat = parseInt(courseRatingFloat);
+
+var starsList = $('.assesments-content-stars');
+
+for (var i = 0; i < courseRatingFloat; i++) {
+	starsList.append("<li class=\"full-star\">");
+	if(courseRatingFloat -1 == i && courseRatingDecimalPart >= 0.4)
+		starsList.append("<li class=\"half-star\">");
+}
