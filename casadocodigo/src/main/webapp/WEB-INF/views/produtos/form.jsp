@@ -1,34 +1,49 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib  uri="http://www.springframework.org/tags/form" prefix="form"%>
+    <%@ taglib  uri="http://www.springframework.org/tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/casadocodigo/produtos" method="POST">
+	<form:form action="${s:mvcUrl('PC#gravar').build() }" method="POST" 
+		commandName="produto" enctype="multipart/form-data">
 		<div>
 			<label>Titulo</label>
-			<input type="text" name="titulo"></input>
+			<form:input path="titulo"/>
+			<form:errors path="titulo"/>
 		</div>
 		<div>
-			<label>Descri��o</label>
-			<textarea rows="10" cols="20" name="descricao"></textarea>
+			<label>Descrição</label>
+			<form:textarea rows="10" cols="20" path="descricao"/>
+			<form:errors path="descricao"/>
 		</div>
 		<div>
 			<label>Paginas</label>
-			<input type="text" name="paginas">
+			<form:input path="paginas"/>
+			<form:errors path="paginas"/>
+		</div>
+		<div>
+			<label>Data de lançamento</label>
+			<form:input path="dataLancamento"/>
+			<form:errors path="dataLancamento"></form:errors>
 		</div>
 		<c:forEach items="${tipos }" var="tipoPreco" varStatus="status">
 			<div>
 				<label>${tipoPreco}</label>
-				<input type="text" name="precos[${status.index}].valor">
-				<input type="hidden" name="precos[${status.index}].tipo" value="${tipoPreco}">
+				<form:input path="precos[${status.index}].valor"/>
+				<form:hidden path="precos[${status.index}].tipo" value="${tipoPreco}"/>
 			</div>
 		</c:forEach>
+		<div>
+			<label>Sumário</label>
+			<input name="sumario" type="file">
+		</div>
 		<button type=submit>Cadastrar</button>
-	</form>
+	</form:form>
 </body>
 </html>

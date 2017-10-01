@@ -1,0 +1,132 @@
+(function() {
+	
+	var videoData = $('#video-container-data');
+
+	function loadVimeoVideo() {
+		var sectionId = videoData.data('section-id');
+		var taskId = videoData.data('task-id');
+		var courseCode = videoData.data('course');
+		var courseId = videoData.data('course-id');
+		var playbackRate = videoData.data('playback-rate');
+		var quality = videoData.data('quality');
+		var gnarusName = videoData.data('gnarus-name');
+
+		var url = '/course/' + courseCode + '/task/' + taskId + '/video';
+		$.get(url, function(sources) {
+			attachVideoSources(sources, sectionId, courseId, playbackRate, quality, gnarusName);
+			prepareVimeoVideo(courseId, sectionId, playbackRate, quality);
+			$("#loading").remove();
+			$('#video-player-frame').bind('contextmenu', function() { return false; });
+			if (videoData.hasClass('custom-player')) $('#video-player-frame').remove();
+		}).fail(fallbackToIframePlayer);
+	}
+
+	function attachVideoSources(sources, sectionId, courseId, playbackRate, quality, gnarusName) {
+		var posterImage = '/images/video/vinheta-' + gnarusName + '.png';
+		var video = $('<video id="video-player-frame" class="video-js vjs-default-skin video-player-frame video-player" controls preload="auto" poster="' + posterImage + '"></video>');
+		$.each(sources, function() {
+			var source = $('<source type="video/mp4">');
+			source.attr('src', this.link);
+			source.attr('data-res', this.quality);
+			video.append(source);
+		});
+		if(isUsingIframePlayer()){
+			video.hide();
+		}
+		videoData.append(video);
+	}
+
+	function isUsingIframePlayer(){
+		return videoData.children('iframe').size() > 0;
+	}
+
+	function fallbackToIframePlayer() {
+		if(isUsingIframePlayer()) return;
+		$('#loading').remove();
+
+		var changePlayerButton = $('.video-changePlayer');
+		changePlayerButton.unbind('click');
+		changePlayerButton.attr("title", "O player com controle de velocidade está temporariamente indisponível.");
+
+		var listItem = $('.settings-box-item-player');
+		listItem.addClass('settings-box-item-player--disabled');
+
+		var changePlayerButtonSpan = $('.video-changePlayer span');
+		changePlayerButtonSpan.show();
+
+		togglePlayer();
+	}
+	
+	function togglePlayer(){
+		if($('#vimeo-iframe').length == 0){
+			loadVimeoIframePlayer();
+		}
+		$('#video-player-frame').toggle();
+		$('#vimeo-iframe').toggle();
+		$('#boavista_player').toggle();
+		$('#loading').toggle();
+		videojs('video-player-frame').pause();
+	}
+
+	function loadVimeoIframePlayer() {
+		var uri = $(".video-changePlayer").data("uri");
+		var iframe = $('<iframe id="vimeo-iframe" class="video-js vjs-tech" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+		iframe.attr("src", uri + "?api=1");
+		iframe.hide();
+		videoData.append(iframe);
+	}
+
+	function prepareVimeoVideo(course, section, defaultPlaybackRate, quality) {
+		var category = "course-video";
+		var label = ("course-" + course + " section-" + section);
+
+		function updateRateChange() {
+			var rate = this.playbackRate();
+			$.post("/user/profile/setPlaybackRate", {
+				rate : rate
+			});
+			ga('send', 'event', {
+				'eventCategory' : category,
+				'eventAction' : 'ratechange',
+				'eventLabel' : label,
+				'eventValue' : rate,
+				'nonInteraction' : true
+			});
+		}
+
+		HDtoggle("video-player-frame", quality);
+		videojs("video-player-frame", {
+			playbackRates : [ 0.7, 0.8, 1, 1.2, 1.5, 2 ],
+			plugins : {
+				"HD" : {},
+				"ga" : {
+					eventCategory : category,
+					eventLabel : label
+				}
+			}
+		}, function() {
+			this.ga();
+			this.on("ratechange", updateRateChange);
+			this.on("error", fallbackToIframePlayer);
+		}).ready(function() {
+			this.playbackRate(defaultPlaybackRate);
+		});
+	}
+
+	$(document).ready(function() {
+		loadVimeoVideo();
+		$(".video-changePlayer").on("click", togglePlayer);
+	});
+
+	$(window).keypress(function(e) {
+		if (e.which == 32 && !$(".skipKeyPress").is(":focus")) {
+			var video = document.querySelector("video");
+            if (video) {
+                e.preventDefault();
+                if (video && video.paused == true) video.play();
+                else video.pause();
+            }
+		}
+	});
+
+})();

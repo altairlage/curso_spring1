@@ -1,0 +1,457 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR" data-product="alura">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>Spring MVC I: Aula 12 - Atividade 2 Escopo sessão | Alura - Cursos online de tecnologia</title>
+	
+	
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="/images/alura/favicon.ico">
+	
+	<link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans:400,300,600,700,800|Source+Serif+Pro' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	
+	<link rel="stylesheet" href="/style/lib/video-js.css">
+    <link rel="stylesheet" href="/style/lib/video-js-resolutions.css">
+    <link rel="stylesheet" href="/style/lib/prettify.css">
+
+	<link rel="stylesheet" href="/style/gnarus/base.css">
+	<link rel="stylesheet" href="/style/gnarus/block/formattedText.css">
+	
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/container.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/classPage.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/menuSettings.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/alternativeList.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskFeedback.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/markdown.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/finishSection.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/phrase.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/hqexplanation.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/openquestion.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/textcontent.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/video.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/singlechoice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/music.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/multiplechoice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/videodialog.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/fillintheblank.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/speakingpractice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/pronunciationpractice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/repetition.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/genericVideo.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskContent.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskButtons.css">
+	<link rel="stylesheet" href="/style/gnarus/block/markdownEditor.css">
+	<link rel="stylesheet" href="/style/gnarus/block/audioPlayer.css">
+
+	
+	
+	<style type="text/css">
+		.task:before {
+			background-color: #FFE000;
+		}
+	</style>
+	
+	
+	
+	</head>
+<body>
+
+<section class='task' data-task-type="hqexplanation" data-task-id="11476" data-author-id="75042" data-course-code="spring-mvc-1-criando-aplicacoes-web" data-section-number="12" data-domain="cursos.alura.com.br" data-hasFeedbackAnswer="false">
+	<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class='openMenu-button task-body-button '></button>
+	
+	<section class="task-body">
+		<header class="task-body-header">
+			<div class="container">
+				<h1 class="task-body-header-title">
+					<svg class="task-body-header-title-svg" aria-label="Atividade de Explicação">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION" />
+					</svg>
+					<small>02</small>
+					<span class="task-body-header-title-text"> Escopo sessão</span>
+				</h1>
+				<div class="task-body-header-actions">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11476/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
+				</div>
+			</div>
+		</header>
+		<main class="task-body-main" data-should-warn="false">
+			
+
+
+
+
+
+	
+		
+
+
+
+
+<section class="hqExplanation" id="task-content">
+	<div class="container">
+	
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações"></button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o Player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="/suggestions/new/spring-mvc-1-criando-aplicacoes-web/11476/question">Sugerir Melhoria</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+		<div class="formattedText">
+			<p>Nas aulas anteriores, criamos o carrinho de compras da nossa aplicação e fizemos aparecer na página de detalhes o número de produtos que já adicionamos no carrinho. Faça alguns testes, adicione produtos para se certificar que tudo está funcionando perfeitamente.</p>
+<p>Nossos testes até agora, não consideraram a situação na qual múltiplos usuários acessam a loja. Nós testamos considerando apenas um usuário. Faça o seguinte teste:
+Abra a aplicação em um navegador e adicione alguns itens no carrinho de compras. Após isso, abra um outro navegador e acesse a página de detalhes de um produto. O segundo navegador apresenta o carrinho com o mesmo número de itens do primeiro navegador. Isso não deveria acontecer.</p>
+<p>Neste caso, dois navegadores diferentes deveriam representar dois usuários diferentes. Aparentemente, a aplicação está compartilhando o carrinho com todos os usuários que a acessam. Seria a mesma situação de estar em uma loja física e outra pessoa colocasse produtos em nossa sacola de compras. Isso não parece certo.</p>
+<p>Note que quando um usuário escolhe um livro e depois, uma segunda pessoa escolhe outro item, os dois clientes estão adicionando produtos no mesmo carrinho.  </p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_12_carrinho_com_contagem_errada.png" alt="Carrinho de compras compartilhado" /></p>
+<p>Isso acontece porque ao marcarmos a classe <code>CarrinhoCompras</code> com a anotação <code>&#64;Component</code>, transformando nossa classe em um <strong><em>Bean</em></strong> do <strong>Spring</strong> estamos também configurando que este objeto será <strong>Singleton</strong>. Por padrão, o <strong>Spring</strong> tem esta configuração para os seus componentes.</p>
+<p>Para corrigir o problema, devemos especificar o escopo do componente através da anotação <code>&#64;Scope</code>. Ela recebe um parâmetro chamado <code>value</code> que pode receber valores das constantes da interface <code>WebApplicationContext</code>.</p>
+<p>Quando se faz necessário que um recurso seja individual, ou seja, único para cada usuário, definimos os recursos com o escopo de sessão. Este é   criado a partir do momento em que o usuário entra em uma determinada aplicação e segue até o encerramento da mesma - ou ao fechar do navegador em alguns casos.</p>
+<p>Então, configure a classe <code>CarrinhoCompras</code> para que o componente seja criado no escopo de sessão e assim seja único para cada usuário ao entrar na aplicação.
+A constante da interface <code>WebApplicationContext</code> neste caso será a <code>SCOPE_SESSION</code>.</p>
+<pre class="prettyprint"><code>&#64;Component
+&#64;Scope(value&#61;WebApplicationContext.SCOPE_SESSION)
+public class CarrinhoCompras {
+    [...]
+}</code></pre>
+<p>Mas fazer somente isso no <strong>Spring</strong> não será o suficiente. Se iniciarmos o servidor agora teremos um erro porque o escopo de sessão não é permitido dentro do <code>CarrinhoComprasController</code> que está dentro do escopo de aplicação. Resolveremos este problema com a mesma solução, mas com valores diferentes. Em seguida, entenderemos o motivo.</p>
+<p><strong><em>Controller</em></strong> no geral tem um papel bem definido, ele simplesmente trata a requisição. Ele recebe os dados, repassa para um outro objeto e devolve uma resposta. Pensando assim, podemos concluir que após a requisição ser atendida, não faz sentido que o <strong><em>controller</em></strong> ainda esteja &#34;vivo&#34;. Geralmente, o escopo dos <strong><em>controllers</em></strong> é o de <strong><em>request</em></strong>. Isto significa que quando há uma requisição, o <strong><em>controller</em></strong> é criado e depois, ela deixa de existir. Podemos configurar isso através da anotação <code>&#64;Scope</code> com o valor da constante <code>SCOPE_REQUEST</code> da interface <code>WebApplicationContext</code>.</p>
+<pre class="prettyprint"><code>&#64;Controller
+&#64;RequestMapping(&#34;/carrinho&#34;)
+&#64;Scope(value&#61;WebApplicationContext.SCOPE_REQUEST)
+public class CarrinhoComprasController {
+    [...]
+}</code></pre>
+<p>Inicie o servidor, faça os testes novamente. Faça verificação tanto com um usuário quanto com vários. O carrinho de compras não deve mais estar compartilhado e cada usuário deve ter o seu próprio com os produtos selecionados.  </p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_12_carrinho_de_compras_em_sessao.png" alt="carrinho unico por usuário" /></p>
+
+		</div>
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+				
+
+
+
+<section class="task-actions">
+	<div class="container">
+		
+
+
+
+
+
+<a href="/forum/curso-spring-mvc-1-criando-aplicacoes-web/exercicio-escopo-sessao/11476/novo" class=" task-actions-button task-actions-button-forum" data-amplitude-onsubmit='{"name":"help-needed","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11476","task-kind":"Explicação"}'>Tirar Dúvida</a><!--
+		 --><a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11476/next" class="task-actions-button task-body-actions-button task-actions-button-next">Próxima Atividade</a>
+	</div>
+</section>
+			
+		</main>
+	</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+<aside class="task-menu">
+	<section class="task-menu-header">
+		<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class='openMenu-button task-menu-button '></button>
+		<div class="task-menu-header-info">
+			<a class="task-menu-header-info-title" href="/course/spring-mvc-1-criando-aplicacoes-web" title="Ir para página do curso">
+				<img src="https://www.alura.com.br/assets/api/cursos/spring-mvc-1-criando-aplicacoes-web.svg" alt="ícone Spring MVC I: Criando aplicações web" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px"/>
+				<h2 class="task-menu-header-info-title-text">Spring MVC I: Criando aplicações web</h2>
+			</a>
+			<div class="task-menu-header-info-progress">
+				
+				<span class="task-menu-header-info-progress-percentage ">57%</span>
+				<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 57%, transparent 57%);"></span>
+			</div>
+		</div>
+	</section>
+	
+	<section class="task-menu-section">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>12</strong>
+				<span>de 14</span></span>
+			<h3 class="task-menu-section-title-text">
+				Escopo sessão
+			</h3>
+		</div>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			Atividades
+			<span>2 de 5</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11475" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO" />
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Vídeo 1">
+							Vídeo 1
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">08min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11476" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION" />
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Escopo sessão">
+							Escopo sessão
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11477" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Entendendo o escopo">
+							Entendendo o escopo
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11478" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Tipos de escopo">
+							Tipos de escopo
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11479" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Adicionando escopo a nossa aplicação">
+							Adicionando escopo a nossa aplicação
+						</span>
+						
+					</a>
+				</li>
+			
+		</ul>
+	</nav>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aulas
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href='/course/spring-mvc-1-criando-aplicacoes-web/section/'+this.value;">
+			
+				<option value="1" >01. Começando com SpringMVC</option>
+			
+				<option value="2" >02. Cadastro de produtos</option>
+			
+				<option value="3" >03. Cadastro de preços do produto</option>
+			
+				<option value="4" >04. Listando os produtos</option>
+			
+				<option value="5" >05. Redirect com Escopo de Flash</option>
+			
+				<option value="6" >06. Validação e conversão de dados</option>
+			
+				<option value="7" >07. Mais Validações </option>
+			
+				<option value="8" >08. Formatação de datas</option>
+			
+				<option value="9" >09. Enviando arquivos ao servidor</option>
+			
+				<option value="10" >10. Url amigáveis</option>
+			
+				<option value="11" >11. Expondo atributos no jsp</option>
+			
+				<option value="12" selected>12. Escopo sessão</option>
+			
+				<option value="13" >13. Carrinho de compras</option>
+			
+				<option value="14" >14. Finalizando o carrinho</option>
+			
+		</select>
+	</section>
+	<section class="task-menu-others">
+		<h2 class="task-menu-others-title ">
+			Outros Links
+		</h2>
+		<a href="/forum/curso-spring-mvc-1-criando-aplicacoes-web/todos" class="task-menu-others-link task-menu-others-link-forum " title="Ir para o fórum do curso">Fórum</a>
+		<a href="/dashboard" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
+	</section>
+	<section class="task-menu-footer">
+		<a class="task-menu-footer-user" href="/user/altair-lage" title="Ir para sua página de usuário">
+			<img src="https://www.gravatar.com/avatar/846d7bad034e3c292bc8e433e11b4683.png?r=PG&size=60x60&d=https%3A%2F%2Fcursos.alura.com.br%2Fimages%2Fforum%2Favatar_a.png" alt="Gravatar de Altair Lage" class="task-menu-footer-img" width="40px" height="40px"/>
+			
+				<p class="task-menu-footer-detalhes">
+					<span class="task-menu-footer-detalhes-nome">Altair Lage</span>
+					<span class="task-menu-footer-detalhes-xp">
+						28.8k xp
+					</span>
+				</p>
+			
+			<input type="hidden" value="" />
+			<input type="hidden" value="" />
+		</a>
+		<a href="/dashboard" class="task-menu-footer-logo">
+			<img src="/images/gnarus/classPage/icon-menu-alura.svg" alt="Logo da Alura" class="task-menu-footer-logo-image" width="19px" height="32px" title="Ir para a página principal" />
+		</a>
+	</section>
+</aside>
+</section>
+
+
+
+
+	<script src="/script/lib/jquery2/jquery-2.1.3.min.js"></script>
+	<script src="/script/gnarus/block/buttonToggle.js" async></script>
+	<script src="/script/gnarus/block/sectionMenu.js" async></script>
+
+	<script src="/script/lib/marked.js"></script>
+	<script src="/script/gnarus/block/markdownEditor.js" async></script>
+	<script src="/script/gnarus/block/caret.js" async></script>
+	<script src="/js/gnarus/keydownWatchers.js" async></script>
+	<script src="/js/prettify.js" async></script>
+
+	<script src="/script/gnarus/block/preventsDoubleClick.js" async></script>
+	<script src="/script/gnarus/block/assessment.js" async></script>
+	<script src="/script/gnarus/block/login-form.js" async></script>
+	<script src="/script/gnarus/classPage/classPage.js"></script>
+	<script src="/script/gnarus/classPage/aria.js"></script>
+	<script src="/script/gnarus/classPage/phrase.js"></script>
+	<script src="/script/gnarus/classPage/feedback.js"></script>
+	
+	
+
+	
+	
+	
+	
+
+	<script src="/script/musicdot/partitura.js"></script>
+	<script src="/script/gnarus/classPage/audioProgress.js"></script>
+
+	
+	
+	
+		
+
+<script type="text/javascript" src="/js/amplitude.js"></script>
+
+<script>
+
+	amplitudeInit("84647047775d06b4051d80eccd387bd3");
+	
+	
+		var userProperties = {"name":"Altair Lage","email":"altair.lage@datablink.com"};
+		amplitudeIdentify("75042", userProperties);
+	
+	
+	
+
+	
+	
+	$('[data-amplitude]').on('click', function(){
+		var data = $(this).data().amplitude;
+		track(data);
+	});
+	
+</script>
+
+		
+		
+			<script>
+				track({"name":"task-seen","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11476","task-kind":"Explicação"});
+			</script>
+		
+	
+	
+ 
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"b5f9030682","agent":"","beacon":"bam.nr-data.net","applicationTime":50,"applicationID":"12544460","transactionName":"ZVFTNhEEXEdTWkdeV1wbchcQEV1ZHVtBGVtdWR8BAgBeQV8XVFlZQEFCTAsEQFhXQEJCUVxaHwEMC0ZGXVVfUkocZ1QBFwxdWnFWXUNKXVhdBxFKQVxdTmdWS1k=","queueTime":0}</script></body>
+</html>

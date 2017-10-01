@@ -1,0 +1,24 @@
+$(document).ready(function() {
+    if ($(".partitura").length > 0) {
+        $(".partitura").each(function () {
+            $(this).css("border", "3px solid #efefef")
+            $(this).css("padding", "10px 10px 52px 10px");
+            var path = $(this).attr('src');
+            var alt = $(this).attr('alt');
+            $(this).after("<br/><a class='button buttonAction partitura-download' href='" + path + "' download='" + alt + "' title='" + alt + "'>Download</a>");
+        });
+    }
+});
+
+if ($(".partitura").length > 0) {
+    $('.partitura').on('click', function () {
+        var elem = $(this).get(0);
+        if (document.webkitFullscreenElement) {
+            document.webkitCancelFullScreen();
+        }
+        else {
+            elem.webkitRequestFullScreen();
+        }
+        ;
+    });
+}

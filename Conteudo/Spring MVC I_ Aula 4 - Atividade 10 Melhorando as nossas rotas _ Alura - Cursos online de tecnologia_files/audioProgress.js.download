@@ -1,0 +1,40 @@
+var circumference = 2 * Math.PI * parseInt($('circle').attr('r'));
+var updateIntervalMs = 30;
+$(function() {
+    $('circle').each(function(i,e) {
+        $(e).attr('stroke-dasharray', circumference);
+    });
+});
+
+function setProgress (value, max) {
+    var current = -(value * circumference / max);
+    $($(this).children('.progress')).attr('stroke-dashoffset', current);
+}
+
+var interval = {};
+$('.phrase-audio').on('click', function() {
+    var state = $(this).attr('data-state');
+    var player = $(this).children(".phrase-audio-player")[0];
+    if (state == 'paused') {
+        $(this).attr('data-state','playing');
+        $(this).attr('aria-label', 'Stop');
+        player.play();
+        interval[player] = setInterval(function() {
+            var current = -(player.currentTime * circumference / player.duration);
+            parent = $(player).parent();
+            $(parent).find('.progress').attr('stroke-dashoffset', current);
+        }, updateIntervalMs);
+
+    } else {
+        $(this).attr('data-state', 'paused');
+        $(this).attr('aria-label', 'Play');
+        player.pause();
+        clearInterval(interval[player]);
+    }
+});
+
+$(".phrase-audio-player").bind("ended", function() {
+    clearInterval(interval[this]);
+    $(this).closest('.phrase-audio').attr('data-state', 'paused');
+    $($(this).children('.progress')).attr('stroke-dashoffset', 0);
+});

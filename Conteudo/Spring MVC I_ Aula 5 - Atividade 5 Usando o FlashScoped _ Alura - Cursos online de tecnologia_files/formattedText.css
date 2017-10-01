@@ -1,0 +1,107 @@
+.formattedText {
+	color: #444C4E;
+	font-size: 14px;
+	line-height: 1.6;
+	/* text-align: justify; */
+}
+
+.formattedText p:not(:first-child),
+.formattedText ul,
+.formattedText ol,
+.formattedText .prettyprint {
+	margin: 1.5em 0;
+}
+
+.formattedText ul,
+.formattedText ol {
+	margin-left: 2em;	
+}
+
+.formattedText li ul,
+.formattedText li ol {
+	margin-bottom: 0.25em;
+	margin-top: 0.25em;	
+}
+
+.formattedText li {
+	margin: 0.25em 0;
+}
+	.formattedText ol li {
+		list-style-type: decimal;
+	}
+	.formattedText ul li {
+		list-style-type: disc;
+	}
+		.formattedText li ul li {
+			list-style-type: circle;
+		}
+
+.formattedText h1,
+.formattedText h2 {
+	font-size: 1.25em;
+	margin-top: 2.5em;
+}
+
+.formattedText img {
+	max-width: 100%;	
+}
+
+.formattedText table {
+    background: white;
+    margin-bottom: 1.25rem;
+    border: solid 1px #dddddd;
+    border-spacing: 0;
+}
+
+.formattedText thead,
+.formattedText tfoot {
+    background: whitesmoke;
+    font-weight: bold;
+}
+
+.formattedText table tr,
+.formattedText table td {
+    white-space: nowrap;
+}
+
+.formattedText th,
+.formattedText td {
+    padding: 0.5625rem 0.625rem;
+    font-size: 0.875rem;
+    color: #222222;
+}
+
+@media (min-width: 600px) {
+	.formattedText {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 800px) {
+	.formattedText {
+		font-size: 17px;
+	}
+	
+	.formattedText,
+	.formattedText-mainTitle {
+		margin: 2%;
+	}
+}
+
+@media print {
+	.formattedText {
+		font-size: 13px;
+	}
+
+	.formattedText a[href]:after {
+		content: " (" attr(href) ")"; 
+	}
+}
+
+output.formattedText code {
+	background-color: inherit;
+}
+
+output.formattedText pre {
+	overflow: auto;
+}

@@ -1,0 +1,86 @@
+(function () {
+
+    function configure(editor) {
+        var sourceEl = editor.querySelector('.markdownEditor-source');
+        var previewEl = editor.querySelector('.markdownEditor-preview');
+        
+        if(sourceEl == null || previewEl == null){
+        	return;
+        }
+
+        var callback = debounce(generateEventHandler(sourceEl, previewEl));
+        sourceEl.addEventListener('input', callback);
+
+        sourceEl.addEventListener('keydown', function (e) {
+            execute(sourceEl, previewEl);
+        });
+        // executa 1a vez, caso tenha conteudo la
+        execute(sourceEl, previewEl);
+    }
+    
+    function debounce(callback) {
+        var timeout;
+        return function () {
+            var context = this;
+            var args = arguments;
+            clearTimeout(timeout);
+
+            timeout = setTimeout(function () {
+                callback.apply(context, args);
+            }, isDesktop ? 300 : 800);
+        };
+    }
+
+    function generateEventHandler() {
+        var args = arguments;
+        return function (event) {
+            execute.apply(null, args);
+        };
+    }
+
+    function execute(sourceEl, previewEl) {
+        convert(sourceEl, previewEl);
+    }
+
+    //Monkey patch para replaceAll
+    String.prototype.replaceAll = String.prototype.replaceAll || function (needle, replacement) {
+            return this.split(needle).join(replacement);
+        };
+
+    function convert(sourceEl, previewEl) {
+        var source = sourceEl.value.replaceAll("[code]", "```").replaceAll("[/code]", "```");
+
+        if (typeof marked !== 'undefined') {
+            var output = marked(source);
+            previewEl.innerHTML = output;
+        } else {
+            setTimeout(function () {
+                convert(sourceEl, previewEl);
+            }, 300);
+        }
+    }
+
+    // Roda no startup
+    var isDesktop = matchMedia('(min-width: 800px)').matches;
+    var editors = document.querySelectorAll('.markdownEditor');
+    for (var i = 0; i < editors.length; i++) {
+        configure(editors[i]);
+
+        // Habilita preview por padrão se Tela grande
+        if (isDesktop) {
+        	var buttonPreview = editors[i].querySelector('.markdownEditor-button-preview');
+        	if(buttonPreview != null){        		
+        		gnarus.buttonToggle.toggle(buttonPreview);
+        	}
+        }
+    }
+    
+    $('.markdownEditor-textArea').on('input', function(){
+        $('.markdownEditor-preview').scrollTop($('.markdownEditor-preview')[0].scrollHeight);
+    });
+    
+    $('.markdownEditor-button-code').on('click', function(){
+    	$('.markdownEditor-source').caret('\n```\ninsira seu código aqui\n```');
+    });
+
+})();

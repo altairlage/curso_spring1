@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11448 -->
+<html lang="pt-BR" data-product="alura" class="gr__cursos_alura_com_br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>Spring MVC I: Aula 8 - Atividade 2 Formatação de datas | Alura - Cursos online de tecnologia</title>
+	
+	
+<script type="text/javascript" src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/b5f9030682"></script><script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/nr-1044.min.js.download"></script><script type="text/javascript" async="" src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/amplitude-3.0.2-min.gz.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="https://cursos.alura.com.br/images/alura/favicon.ico">
+	
+	<link href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/video-js.css">
+    <link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/video-js-resolutions.css">
+    <link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/prettify.css">
+
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/base.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/formattedText.css">
+	
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/container.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/classPage.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/menuSettings.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/alternativeList.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/taskFeedback.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/markdown.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/finishSection.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/phrase.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/hqexplanation.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/openquestion.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/textcontent.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/video.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/singlechoice.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/music.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/multiplechoice.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/videodialog.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/fillintheblank.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/speakingpractice.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/pronunciationpractice.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/repetition.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/genericVideo.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/taskContent.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/taskButtons.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/markdownEditor.css">
+	<link rel="stylesheet" href="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/audioPlayer.css">
+
+	
+	
+	<style type="text/css">
+		.task:before {
+			background-color: #FFE000;
+		}
+	</style>
+	
+	
+	
+	</head>
+<body data-gr-c-s-loaded="true">
+
+<section class="task" data-task-type="hqexplanation" data-task-id="11448" data-author-id="75042" data-course-code="spring-mvc-1-criando-aplicacoes-web" data-section-number="8" data-domain="cursos.alura.com.br" data-hasfeedbackanswer="false">
+	<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class="openMenu-button task-body-button "></button>
+	
+	<section class="task-body">
+		<header class="task-body-header">
+			<div class="container">
+				<h1 class="task-body-header-title">
+					<svg class="task-body-header-title-svg" aria-label="Atividade de Explicação">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+					</svg>
+					<small>02</small>
+					<span class="task-body-header-title-text"> Formatação de datas</span>
+				</h1>
+				<div class="task-body-header-actions">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11448/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
+				</div>
+			</div>
+		</header>
+		<main class="task-body-main" data-should-warn="false">
+			
+
+
+
+
+
+	
+		
+
+
+
+
+<section class="hqExplanation" id="task-content">
+	<div class="container">
+	
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações"></button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o Player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="https://cursos.alura.com.br/suggestions/new/spring-mvc-1-criando-aplicacoes-web/11448/question">Sugerir Melhoria</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+		<div class="formattedText">
+			<p>Nos últimos capítulos, fizemos uma série de validações em nossos livros para garantir que os livros sejam cadastrados com pelo menos três informações que deixamos como obrigatórias, que são: O título, a quantidade de páginas e a descrição. Essas são as informações minimas para cadastrar um livro em nosso sistema.</p>
+<p>Na <a href="http://www.casadocodigo.com.br/" rel="nofollow">Casa do Código</a> quando ocorre o lançamento de um livro, a data do lançamento deste livro fica registrada no sistema. Vamos fazer com que essa data seja cadastrada em nosso sistema também. Vamos começar essas alterações pelo <code>form.jsp</code></p>
+<p>Nosso formulário agora precisa de um campo onde possamos digitar a data de lançamento do livro. Teremos então um novo <code>input</code> do tipo <code>text</code> com o atributo <code>name</code> com o valor <code>dataLancamento</code>. Já vamos deixar a validação dos erros com a tag <code>form:errors</code> pronta, com o <code>path</code> de valor <code>dataLancamento</code>. Seguindo o padrão dos outros campos do <code>form.jsp</code> teremos com nosso novo campo o seguinte código:
+<strong>Observação</strong>: Lembre-se de pôr o <code>label</code> deste campo.</p>
+<pre class="prettyprint"><code><span class="tag">&lt;div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;label&gt;</span><span class="pln">Data de Lançamento</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+<p>Vamos pôr esse campo logo após o campo de número de páginas. Nosso formulário no <code>form.jsp</code> fica assim:</p>
+<pre class="prettyprint"><code><span class="tag">&lt;form:form</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">"${ s:mvcUrl('PC#gravar').build() }"</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">"post"</span><span class="pln"> </span><span class="atn">commandName</span><span class="pun">=</span><span class="atv">"produto"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Título</span><span class="tag">&lt;/label&gt;</span><span class="pln"> 
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"titulo"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"titulo"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Descrição</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">rows</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="atn">cols</span><span class="pun">=</span><span class="atv">"20"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"descricao"</span><span class="tag">&gt;&lt;/textarea&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"descricao"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Páginas</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"paginas"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"paginas"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> 
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Data de Lançamento</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;c:forEach</span><span class="pln"> </span><span class="atn">items</span><span class="pun">=</span><span class="atv">"${tipos}"</span><span class="pln"> </span><span class="atn">var</span><span class="pun">=</span><span class="atv">"tipoPreco"</span><span class="pln"> </span><span class="atn">varStatus</span><span class="pun">=</span><span class="atv">"status"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;label&gt;</span><span class="pln">${tipoPreco}</span><span class="tag">&lt;/label&gt;</span><span class="pln"> </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln">
+                </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"precos[${status.index}].valor"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"hidden"</span><span class="pln">
+                </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"precos[${status.index}].tipo"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"${tipoPreco}"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/c:forEach&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="tag">&gt;</span><span class="pln">Cadastrar</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;/form:form&gt;</span></code></pre>
+<p>Precisamos agora, de um atributo que guarde datas em nosso <code>model</code> de produto. Existem duas principais classes para trabalhar com datas no <code>Java</code>. São elas a <code>Date</code> e a <code>Calendar</code>. Iremos usar a <code>Calendar</code> que é mais recente e mais simples de usar. Sendo assim, vamos criar um novo atributo na nossa classe <code>Produto</code> do tipo <code>Calendar</code>, sendo <code>private</code>.</p>
+<p><strong>Observação</strong>: Geralmente os atributos das classes são <code>private</code>, nestes casos lembre-se sempre de gerar os <strong>*Getters and Setters</strong> necessários. Use os atalhos do Eclipse, é mais rápido.</p>
+<p>Com este novo atributo e seus <strong><em>Getters and Setters</em></strong> nossa classe <code>Produto</code> fica com o seguinte código:</p>
+<pre class="prettyprint"><code><span class="lit">@Entity</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Produto</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="lit">@Id</span><span class="pln"> </span><span class="lit">@GeneratedValue</span><span class="pun">(</span><span class="pln">strategy</span><span class="pun">=</span><span class="typ">GenerationType</span><span class="pun">.</span><span class="pln">IDENTITY</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> id</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> titulo</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> descricao</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> paginas</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="lit">@ElementCollection</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Preco</span><span class="pun">&gt;</span><span class="pln"> precos</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Calendar</span><span class="pln"> dataLancamento</span><span class="pun">;</span><span class="pln">
+
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getTitulo</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> titulo</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setTitulo</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> titulo</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">titulo </span><span class="pun">=</span><span class="pln"> titulo</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getDescricao</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> descricao</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setDescricao</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> descricao</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">descricao </span><span class="pun">=</span><span class="pln"> descricao</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getPaginas</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> paginas</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setPaginas</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> paginas</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">paginas </span><span class="pun">=</span><span class="pln"> paginas</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getId</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> id</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setId</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> id</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">id </span><span class="pun">=</span><span class="pln"> id</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Preco</span><span class="pun">&gt;</span><span class="pln"> getPrecos</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> precos</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setPrecos</span><span class="pun">(</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Preco</span><span class="pun">&gt;</span><span class="pln"> precos</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">precos </span><span class="pun">=</span><span class="pln"> precos</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">Calendar</span><span class="pln"> getDataLancamento</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> dataLancamento</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setDataLancamento</span><span class="pun">(</span><span class="typ">Calendar</span><span class="pln"> dataLancamento</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">dataLancamento </span><span class="pun">=</span><span class="pln"> dataLancamento</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="lit">@Override</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> toString</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="str">"Produto [titulo="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> titulo </span><span class="pun">+</span><span class="pln"> </span><span class="str">", descricao="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> descricao </span><span class="pun">+</span><span class="pln"> </span><span class="str">", paginas="</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> paginas </span><span class="pun">+</span><span class="pln"> </span><span class="str">"]"</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+<p>Pronto! Já podemos testar se o nosso sistema salva corretamente as datas. Abra o formulário em <code>localhost:8080/casadocodigo/produto/form</code> e tente cadastrar um novo livro com uma data qualquer. Teremos um erro, mas dessa vez um erro amigavel. Lembra que fizemos algumas validações? Veja o que acontece ao tentar cadastrar o livro com uma data, como por exemplo a data 10/05/2015.</p>
+<p><img src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_8_1_erro_em_data.png" alt="erro na data de lancamento do livro"></p>
+<p>O erro que recebemos faz todo o sentido. Note que apesar de estamos usando um data, no formulário só há textos. Ou seja, o <strong>Spring</strong> não está conseguindo converter nossa data que está em texto no formulário para um formato aceito pelo <code>Calendar</code>. O formato padrão é o internacional.</p>
+<p>Podemos resolver esse problema, com uma anotação em nosso atributo <code>dataLancamento</code> chamada <code>@DateTimeFormat</code> passando o parametro <code>pattern</code> com o valor <code>dd/MM/yyyy</code>. Esse valor será usado para que o <strong>Spring</strong> consiga converter a data corretamente. O código do atributo em nossa classe <code>Produto</code> com a anotação fica da seguinte forma: </p>
+<pre class="prettyprint"><code><span class="lit">@Entity</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Produto</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">[...]</span><span class="pln">
+    </span><span class="lit">@DateTimeFormat</span><span class="pun">(</span><span class="pln">pattern</span><span class="pun">=</span><span class="str">"dd/MM/yyyy"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Calendar</span><span class="pln"> dataLancamento</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">[...]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Teste cadastrar um produto agora, com a data no padrão brasileiro, sendo este: <code>dia/mes/ano</code>. Apesar de funcionar, essa é uma forma trabalhosa de se fazer isso. Imagine que em todo lugar que precisemos usar data precisaremos lembrar dessa formatação. É fácil de esquecer certo? Sem contar que esse será o padrão da aplicação. Sendo um padrão, a melhor opção é configurarmos isso.</p>
+<p>Em nossa classe <code>AppWebConfiguration</code>, que é nossa classe de configuração, faremos essa nova configuração para que não precisemos ficar repetindo essa configuração de data em todos os atributos das outras classes do sistema.</p>
+<p>Criaremos então um novo método chamado <code>mvcConversionService</code> que retorna um objeto do tipo <code>FormattingConversionService</code>. Dentro deste novo método precisamos fazer duas coisas. A primeira delas é criar um objeto do tipo <code>DefaultFormattingConversionService</code> que será o responsável pelo serviço de conversão de formato. A segunda é criar um objeto do tipo <code>DateFormatterRegistrar</code> que fará o registro do formato de data usado para a conversão. Este segundo objeto espera receber outro objeto do tipo <code>DateFormatter</code> que será quem efetivamente guarda o padrão da data, que neste caso será <code>dd/MM/yyyy</code>, dia/mẽs/ano.</p>
+<p>O último passo será usar o registrador para registar o padrão de data no serviço de conversão. Lembre-se de usar a anotação <code>@Bean</code> para que o <strong>Spring</strong> consiga usar essa configuração. Encerramos o código desse método retornando o objeto <code>DefaultFormattingConversionService</code>. Nosso código final fica dessa forma:</p>
+<pre class="prettyprint"><code><span class="lit">@Bean</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="typ">FormattingConversionService</span><span class="pln"> mvcConversionService</span><span class="pun">(){</span><span class="pln">
+    </span><span class="typ">DefaultFormattingConversionService</span><span class="pln"> conversionService </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DefaultFormattingConversionService</span><span class="pun">();</span><span class="pln">
+    </span><span class="typ">DateFormatterRegistrar</span><span class="pln"> formatterRegistrar </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DateFormatterRegistrar</span><span class="pun">();</span><span class="pln">
+    formatterRegistrar</span><span class="pun">.</span><span class="pln">setFormatter</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DateFormatter</span><span class="pun">(</span><span class="str">"dd/MM/yyyy"</span><span class="pun">));</span><span class="pln">
+    formatterRegistrar</span><span class="pun">.</span><span class="pln">registerFormatters</span><span class="pun">(</span><span class="pln">conversionService</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> conversionService</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Nosso atributo agora, não precisa mais passar o formato da data. Ela agora só precisa da anotação simples, sem nenhum parametro. Dessa forma: </p>
+<pre class="prettyprint"><code><span class="lit">@Entity</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Produto</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">[...]</span><span class="pln">
+    </span><span class="lit">@DateTimeFormat</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">Calendar</span><span class="pln"> dataLancamento</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">[...]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Teste novamente, tudo deve funcionar normalmente.Nosso próximo passo é resolver um outro problema que é bem chatinho de se ver acontecendo. A esta altura do curso você já deve ter notado que quando enviamos os dados, com os campos preenchidos, quando validado o formulário nos exibe os erros, mas o forme aparece em branco. É trabalhoso preencher todos os campos novamente por causa de um campo que estava errado.</p>
+<p>O ideal é que mesmo que um dos campos esteja com erro, os outros que não tiveram erro continuem com os dados que foram digitados antes de serem enviados. Para isso, devemos deixar com que o <strong>Spring</strong> gerencie todo o formulário. Fazemos isso usando as tags de formulário do <strong>Spring</strong>.</p>
+<p>Da mesma forma que usamos <code>form:form</code> e <code>form:errors</code>, usaremos agora o <code>form:input</code> que cria um input do tipo <code>text</code>, mas em vez de usar o atributo <code>name</code>, usaremos o atributo <code>path</code> e não precisaremos usar o atributo <code>type</code>. Veja o antes e depois do campo de titulo por exemplo.Antes: <code>&lt;input type="text" name="titulo" /&gt;</code>Depois: <code>&lt;form:input path="titulo" /&gt;</code>  </p>
+<p>A nova tag parece ser bem mais simples certo? Para a descrição, que é um <code>textarea</code>, usaremos a tag <code>form:textarea</code> e para o tipo <code>hidden</code> usaremos a tag <code>form:hidden</code>. A mudança só requer quee troquemos o atributo <code>name</code> para <code>path</code> e remover o atributo <code>type</code>. Nosso formulário está assim atualmente:</p>
+<pre class="prettyprint"><code><span class="tag">&lt;form:form</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">"${ s:mvcUrl('PC#gravar').build() }"</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">"post"</span><span class="pln"> </span><span class="atn">commandName</span><span class="pun">=</span><span class="atv">"produto"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Título</span><span class="tag">&lt;/label&gt;</span><span class="pln"> 
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"titulo"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"titulo"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Descrição</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">rows</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="atn">cols</span><span class="pun">=</span><span class="atv">"20"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"descricao"</span><span class="tag">&gt;&lt;/textarea&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"descricao"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Páginas</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"paginas"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"paginas"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> 
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Data de Lançamento</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;c:forEach</span><span class="pln"> </span><span class="atn">items</span><span class="pun">=</span><span class="atv">"${tipos}"</span><span class="pln"> </span><span class="atn">var</span><span class="pun">=</span><span class="atv">"tipoPreco"</span><span class="pln"> </span><span class="atn">varStatus</span><span class="pun">=</span><span class="atv">"status"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;label&gt;</span><span class="pln">${tipoPreco}</span><span class="tag">&lt;/label&gt;</span><span class="pln"> </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln">
+                </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"precos[${status.index}].valor"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"hidden"</span><span class="pln">
+                </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"precos[${status.index}].tipo"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"${tipoPreco}"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/c:forEach&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="tag">&gt;</span><span class="pln">Cadastrar</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;/form:form&gt;</span></code></pre>
+<p>Com as mudanças, nosso formulário fica dessa forma:</p>
+<pre class="prettyprint"><code><span class="tag">&lt;form:form</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">"${ s:mvcUrl('PC#gravar').build() }"</span><span class="pln"> </span><span class="atn">method</span><span class="pun">=</span><span class="atv">"post"</span><span class="pln"> </span><span class="atn">commandName</span><span class="pun">=</span><span class="atv">"produto"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Título</span><span class="tag">&lt;/label&gt;</span><span class="pln"> 
+        </span><span class="tag">&lt;form:input</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"titulo"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"titulo"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">descricao</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:textarea</span><span class="pln"> </span><span class="atn">rows</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="atn">cols</span><span class="pun">=</span><span class="atv">"20"</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"descricao"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"descricao"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Páginas</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:input</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"paginas"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"paginas"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> 
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;label&gt;</span><span class="pln">Data de Lançamento</span><span class="tag">&lt;/label&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:input</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;form:errors</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"dataLancamento"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;c:forEach</span><span class="pln"> </span><span class="atn">items</span><span class="pun">=</span><span class="atv">"${tipos}"</span><span class="pln"> </span><span class="atn">var</span><span class="pun">=</span><span class="atv">"tipoPreco"</span><span class="pln"> </span><span class="atn">varStatus</span><span class="pun">=</span><span class="atv">"status"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;label&gt;</span><span class="pln">${tipoPreco}</span><span class="tag">&lt;/label&gt;</span><span class="pln"> 
+            </span><span class="tag">&lt;form:input</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"precos[${status.index}].valor"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> 
+            </span><span class="tag">&lt;form:hidden</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"precos[${status.index}].tipo"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"${tipoPreco}"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/c:forEach&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="tag">&gt;</span><span class="pln">Cadastrar</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;/form:form&gt;</span></code></pre>
+<p>Nosso formulário dessa forma ficou bem mais simples. Até o código ficou menor. Vamos agora atualizar nossa página de formulário no navegador para ver se tudo continua funcionando normalmente.</p>
+<p><img src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_8_1_erro_500_objeto_indisponivel.png" alt="erro 500 - objeto não disponivel no formulario"></p>
+<p><strong>Erro 500</strong>: Neither BindingResult nor plain target object for bean name 'produto' available as request attribute. Nosso formulário agora está com erro, ele não chega nem a ser exibido. A mensagem de erro diz que o objeto produto não está disponível como atributo da requisição. O <strong>Spring</strong> tenta usar um objeto da classe <code>Produto</code> para poder exibir o formulário. Isso acontece porque já que configuramos o formulário para guardar os dados mesmo quando acontecer erros de validação, dessa forma, ele precisa de um objeto para poder armazenar esses dados e para poder exibir o formulário, mesmo que vazio.</p>
+<p>Para que o objeto do tipo <code>Produto</code> fique disponível em nosso formulário, só precisamos fazer uma pequena alteração em nosso <code>ProdutosController</code>. Em nosso método <code>form()</code> só precisamos colocar que queremos receber como parametro um objeto do tipo <code>Produto</code>. Dessa forma o <strong>Spring</strong> já deixará este objeto disponível na requisição. Nosso médoto <code>form()</code> que estava assim: <code>public ModelAndView form(){ ... }</code> agora fica assim: <code>public ModelAndView form(Produto produto){ ... }</code>.</p>
+<p>Lembre-se também de passar o objeto produto onde chamamos o médoto <code>form</code>. Lembra do método <code>gravar</code>? Ele caso não receba um produto válido, chama o método <code>form</code>. Devemos então passar para o método <code>form</code> o mesmo objeto recebido no método <code>gravar</code>. Nosso código atual do método <code>gravar</code> está assim:</p>
+<pre class="prettyprint"><code><span class="lit">@RequestMapping</span><span class="pun">(</span><span class="pln">method</span><span class="pun">=</span><span class="typ">RequestMethod</span><span class="pun">.</span><span class="pln">POST</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="typ">ModelAndView</span><span class="pln"> gravar</span><span class="pun">(</span><span class="lit">@Valid</span><span class="pln"> </span><span class="typ">Produto</span><span class="pln"> produto</span><span class="pun">,</span><span class="pln"> </span><span class="typ">BindingResult</span><span class="pln"> result</span><span class="pun">,</span><span class="pln">  </span><span class="typ">RedirectAttributes</span><span class="pln"> redirectAttributes</span><span class="pun">){</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">result</span><span class="pun">.</span><span class="pln">hasErrors</span><span class="pun">()){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> form</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    produtoDao</span><span class="pun">.</span><span class="pln">gravar</span><span class="pun">(</span><span class="pln">produto</span><span class="pun">);</span><span class="pln">
+    redirectAttributes</span><span class="pun">.</span><span class="pln">addFlashAttribute</span><span class="pun">(</span><span class="str">"message"</span><span class="pun">,</span><span class="str">"Produto cadastrado com sucesso"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ModelAndView</span><span class="pun">(</span><span class="str">"redirect:produtos"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>E com a mudança fica assim:</p>
+<pre class="prettyprint"><code><span class="lit">@RequestMapping</span><span class="pun">(</span><span class="pln">method</span><span class="pun">=</span><span class="typ">RequestMethod</span><span class="pun">.</span><span class="pln">POST</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="typ">ModelAndView</span><span class="pln"> gravar</span><span class="pun">(</span><span class="lit">@Valid</span><span class="pln"> </span><span class="typ">Produto</span><span class="pln"> produto</span><span class="pun">,</span><span class="pln"> </span><span class="typ">BindingResult</span><span class="pln"> result</span><span class="pun">,</span><span class="pln">  </span><span class="typ">RedirectAttributes</span><span class="pln"> redirectAttributes</span><span class="pun">){</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">result</span><span class="pun">.</span><span class="pln">hasErrors</span><span class="pun">()){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> form</span><span class="pun">(</span><span class="pln">produto</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    produtoDao</span><span class="pun">.</span><span class="pln">gravar</span><span class="pun">(</span><span class="pln">produto</span><span class="pun">);</span><span class="pln">
+    redirectAttributes</span><span class="pun">.</span><span class="pln">addFlashAttribute</span><span class="pun">(</span><span class="str">"message"</span><span class="pun">,</span><span class="str">"Produto cadastrado com sucesso"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ModelAndView</span><span class="pun">(</span><span class="str">"redirect:produtos"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Atualize o formulário no navegador e teste novamente. Tente cadastrar livros com dados incorretos, tente com dados corretos também para verificar que tudo continua funcionando e agora nossas mensagens de erro aparecem sem que o formulário apareça todo em branco novamente.<img src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/springmvc_i_webaapp_8_1_exibindo_erros_com_dados.png" alt="formulario com os erros e os dados"></p>
+<h3>Recapitulando</h3>
+<p>Neste capítulo fizemos com que nosso formulário de cadastro de produtos permaneça dos com dados mesmo que algum campo tenha sido enviado com informações inválidas. Deixamos o formulário com um código mais simples e fácil de entender.</p>
+<p>Fizemos também uma série de configurações para conversão de datas, uma tarefa muito comum em aplicação de qualquer gênero. 
+Agora é hora de praticar um pouco mais com os exercícios. </p>
+
+		</div>
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+				
+
+
+
+<section class="task-actions">
+	<div class="container">
+		
+
+
+
+
+
+<a href="https://cursos.alura.com.br/forum/curso-spring-mvc-1-criando-aplicacoes-web/exercicio-formatacao-de-datas/11448/novo" class=" task-actions-button task-actions-button-forum" data-amplitude-onsubmit="{&quot;name&quot;:&quot;help-needed&quot;,&quot;course-code&quot;:&quot;spring-mvc-1-criando-aplicacoes-web&quot;,&quot;task-id&quot;:&quot;11448&quot;,&quot;task-kind&quot;:&quot;Explicação&quot;}">Tirar Dúvida</a><!--
+		 --><a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11448/next" class="task-actions-button task-body-actions-button task-actions-button-next">Próxima Atividade</a>
+	</div>
+</section>
+			
+		</main>
+	</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+<aside class="task-menu" style="position: fixed; transform: translateY(0px);">
+	<section class="task-menu-header">
+		<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class="openMenu-button task-menu-button "></button>
+		<div class="task-menu-header-info">
+			<a class="task-menu-header-info-title" href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web" title="Ir para página do curso">
+				<img src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/spring-mvc-1-criando-aplicacoes-web.svg" alt="ícone Spring MVC I: Criando aplicações web" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px">
+				<h2 class="task-menu-header-info-title-text">Spring MVC I: Criando aplicações web</h2>
+			</a>
+			<div class="task-menu-header-info-progress">
+				
+				<span class="task-menu-header-info-progress-percentage ">35%</span>
+				<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 35%, transparent 35%);"></span>
+			</div>
+		</div>
+	</section>
+	
+	<section class="task-menu-section">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>08</strong>
+				<span>de 14</span></span>
+			<h3 class="task-menu-section-title-text">
+				Formatação de datas
+			</h3>
+		</div>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			Atividades
+			<span>2 de 6</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11447" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Vídeo 1">
+							Vídeo 1
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">19min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11448" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Formatação de datas">
+							Formatação de datas
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11449" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Adicionando o campo data">
+							Adicionando o campo data
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11450" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Melhorando as configurações">
+							Melhorando as configurações
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11451" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Configurando pelo AppWebConfiguration">
+							Configurando pelo AppWebConfiguration
+						</span>
+						
+					</span></a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web/task/11452" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">06</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Mantendo as informações inválidas">
+							Mantendo as informações inválidas
+						</span>
+						
+					</span></a>
+				</li>
+			
+		</ul>
+	</nav>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aulas
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href=&#39;/course/spring-mvc-1-criando-aplicacoes-web/section/&#39;+this.value;">
+			
+				<option value="1">01. Começando com SpringMVC</option>
+			
+				<option value="2">02. Cadastro de produtos</option>
+			
+				<option value="3">03. Cadastro de preços do produto</option>
+			
+				<option value="4">04. Listando os produtos</option>
+			
+				<option value="5">05. Redirect com Escopo de Flash</option>
+			
+				<option value="6">06. Validação e conversão de dados</option>
+			
+				<option value="7">07. Mais Validações </option>
+			
+				<option value="8" selected="">08. Formatação de datas</option>
+			
+				<option value="9">09. Enviando arquivos ao servidor</option>
+			
+				<option value="10">10. Url amigáveis</option>
+			
+				<option value="11">11. Expondo atributos no jsp</option>
+			
+				<option value="12">12. Escopo sessão</option>
+			
+				<option value="13">13. Carrinho de compras</option>
+			
+				<option value="14">14. Finalizando o carrinho</option>
+			
+		</select>
+	</section>
+	<section class="task-menu-others">
+		<h2 class="task-menu-others-title ">
+			Outros Links
+		</h2>
+		<a href="https://cursos.alura.com.br/forum/curso-spring-mvc-1-criando-aplicacoes-web/todos" class="task-menu-others-link task-menu-others-link-forum " title="Ir para o fórum do curso">Fórum</a>
+		<a href="https://cursos.alura.com.br/dashboard" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
+	</section>
+	<section class="task-menu-footer">
+		<a class="task-menu-footer-user" href="https://cursos.alura.com.br/user/altair-lage" title="Ir para sua página de usuário">
+			<img src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/846d7bad034e3c292bc8e433e11b4683.png" alt="Gravatar de Altair Lage" class="task-menu-footer-img" width="40px" height="40px">
+			
+				<p class="task-menu-footer-detalhes">
+					<span class="task-menu-footer-detalhes-nome">Altair Lage</span>
+					<span class="task-menu-footer-detalhes-xp">
+						27.4k xp
+					</span>
+				</p>
+			
+			<input type="hidden" value="">
+			<input type="hidden" value="">
+		</a>
+		<a href="https://cursos.alura.com.br/dashboard" class="task-menu-footer-logo">
+			<img src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/icon-menu-alura.svg" alt="Logo da Alura" class="task-menu-footer-logo-image" width="19px" height="32px" title="Ir para a página principal">
+		</a>
+	</section>
+</aside>
+</section>
+
+
+
+
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/jquery-2.1.3.min.js.download"></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/buttonToggle.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/sectionMenu.js.download" async=""></script>
+
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/marked.js.download"></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/markdownEditor.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/caret.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/keydownWatchers.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/prettify.js.download" async=""></script>
+
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/preventsDoubleClick.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/assessment.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/login-form.js.download" async=""></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/classPage.js.download"></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/aria.js.download"></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/phrase.js.download"></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/feedback.js.download"></script>
+	
+	
+
+	
+	
+	
+	
+
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/partitura.js.download"></script>
+	<script src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/audioProgress.js.download"></script>
+
+	
+	
+	
+		
+
+<script type="text/javascript" src="./Spring MVC I_ Aula 8 - Atividade 2 Formatação de datas _ Alura - Cursos online de tecnologia_files/amplitude.js.download"></script>
+
+<script>
+
+	amplitudeInit("84647047775d06b4051d80eccd387bd3");
+	
+	
+		var userProperties = {"name":"Altair Lage","email":"altair.lage@datablink.com"};
+		amplitudeIdentify("75042", userProperties);
+	
+	
+	
+
+	
+	
+	$('[data-amplitude]').on('click', function(){
+		var data = $(this).data().amplitude;
+		track(data);
+	});
+	
+</script>
+
+		
+		
+			<script>
+				track({"name":"task-seen","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11448","task-kind":"Explicação"});
+			</script>
+		
+	
+	
+ 
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"b5f9030682","agent":"","beacon":"bam.nr-data.net","applicationTime":48,"applicationID":"12544460","transactionName":"ZVFTNhEEXEdTWkdeV1wbchcQEV1ZHVtBGVtdWR8BAgBeQV8XVFlZQEFCTAsEQFhXQEJCUVxaHwEMC0ZGXVVfUkocZ1QBFwxdWnFWXUNKXVhdBxFKQVxdTmdWS1k=","queueTime":0}</script>
+
+</body><object id="1b1a9b5b-8bcb-9082-0aab-18939983b88e" width="0" height="0" type="application/gas-events-uni"></object></html>

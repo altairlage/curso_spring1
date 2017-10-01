@@ -1,0 +1,700 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR" data-product="alura">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>Spring MVC I: Aula 10 - Atividade 2 Url amigáveis | Alura - Cursos online de tecnologia</title>
+	
+	
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="/images/alura/favicon.ico">
+	
+	<link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans:400,300,600,700,800|Source+Serif+Pro' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	
+	<link rel="stylesheet" href="/style/lib/video-js.css">
+    <link rel="stylesheet" href="/style/lib/video-js-resolutions.css">
+    <link rel="stylesheet" href="/style/lib/prettify.css">
+
+	<link rel="stylesheet" href="/style/gnarus/base.css">
+	<link rel="stylesheet" href="/style/gnarus/block/formattedText.css">
+	
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/container.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/classPage.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/menuSettings.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/alternativeList.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskFeedback.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/markdown.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/finishSection.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/phrase.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/hqexplanation.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/openquestion.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/textcontent.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/video.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/singlechoice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/music.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/multiplechoice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/videodialog.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/fillintheblank.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/speakingpractice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/pronunciationpractice.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/repetition.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/genericVideo.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskContent.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskButtons.css">
+	<link rel="stylesheet" href="/style/gnarus/block/markdownEditor.css">
+	<link rel="stylesheet" href="/style/gnarus/block/audioPlayer.css">
+
+	
+	
+	<style type="text/css">
+		.task:before {
+			background-color: #FFE000;
+		}
+	</style>
+	
+	
+	
+	</head>
+<body>
+
+<section class='task' data-task-type="hqexplanation" data-task-id="11461" data-author-id="75042" data-course-code="spring-mvc-1-criando-aplicacoes-web" data-section-number="10" data-domain="cursos.alura.com.br" data-hasFeedbackAnswer="false">
+	<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class='openMenu-button task-body-button '></button>
+	
+	<section class="task-body">
+		<header class="task-body-header">
+			<div class="container">
+				<h1 class="task-body-header-title">
+					<svg class="task-body-header-title-svg" aria-label="Atividade de Explicação">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION" />
+					</svg>
+					<small>02</small>
+					<span class="task-body-header-title-text"> Url amigáveis</span>
+				</h1>
+				<div class="task-body-header-actions">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11461/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
+				</div>
+			</div>
+		</header>
+		<main class="task-body-main" data-should-warn="false">
+			
+
+
+
+
+
+	
+		
+
+
+
+
+<section class="hqExplanation" id="task-content">
+	<div class="container">
+	
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações"></button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o Player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="/suggestions/new/spring-mvc-1-criando-aplicacoes-web/11461/question">Sugerir Melhoria</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+		<div class="formattedText">
+			<p>Nesta aula, criaremos a página de &#34;detalhes&#34; dos nossos livros. Se entrarmos no site da <a href="http://www.casadocodigo.com.br" rel="nofollow">Casa do Código</a> e clicarmos em qualquer um dos livros, veremos outra página com todos os detalhes do produto, como por exemplo: a descrição, a quantidade de páginas, sumário etc.</p>
+<p>Diversas dessas informações estão sendo gravadas no banco de dados durante o cadastro do produto. Então, vamos utilizar a página da <a href="http://www.casadocodigo.com.br" rel="nofollow">Casa do Código</a> como modelo e criar nossa página de detalhes.</p>
+<p><strong>Observação</strong>: Os arquivos da página de modelo que usaremos estão disponíveis para <a href="https://s3.amazonaws.com/caelum-online-public/spring-mvc-1-criando-aplicacoes-web/detalhe-com-css.zip" rel="nofollow">download</a><em>*</em> nos exercício. Usaremos o código disponibilizada como referência nesta aula.</p>
+<p>Faremos na página de &#34;detalhes&#34; uma série de modificações para que esta passe a exibir os detalhes dos nossos produtos. A página se encontrará no arquivo <code>detalhe.jsp</code>. A primeira mudança que faremos neste arquivo é referente ao título da páginas. Veja como está agora:  </p>
+<pre class="prettyprint"><code>&lt;title&gt;Livros de Java, SOA, Android, iPhone, Ruby on Rails e muito mais - Casa do Código&lt;/title&gt;</code></pre>
+<p>Como a página deve exibir os detalhes de um determinado produto. Mudaremos o título de acordo com o livro escolhido. Substituiremos então a parte do título da página que tem o seguinte texto: <code>Livros de Java, SOA, Android, iPhone, Ruby on Rails e muito mais</code> para  <code>${produto.titulo}</code>.</p>
+<pre class="prettyprint"><code>&lt;title&gt;${produto.titulo} - Casa do Código&lt;/title&gt;</code></pre>
+<p>Na tag <code>body</code> não há nenhuma classe de estilo. Vamos usar uma chamada <code>produto</code> para esclarecer que se refere à página de um produto especifico. Assim também poderemos aproveitar os <code>CSS</code> da <a href="http://www.casadocodigo.com.br" rel="nofollow">Casa do Código</a>. A tag <code>body</code> ficará dessa forma: <code>&lt;body class&#61;&#34;produto&#34;&gt;</code>.</p>
+<p>Note que o código fonte da página está todo em Inglês. Por questões de praticidade, modificaremos algumas partes para usarmos o idioma Português. Busque a parte do código referente ao carrinho de compras, que estará dentro da tag <code>header</code>:  </p>
+<pre class="prettyprint"><code> &lt;header id&#61;&#34;layout-header&#34;&gt;
+        &lt;div class&#61;&#34;clearfix container&#34;&gt;
+            &lt;a href&#61;&#34;/&#34; id&#61;&#34;logo&#34;&gt;
+            &lt;/a&gt;
+            &lt;div id&#61;&#34;header-content&#34;&gt;
+                &lt;nav id&#61;&#34;main-nav&#34;&gt;
+
+                    &lt;ul class&#61;&#34;clearfix&#34;&gt;
+                        &lt;li&gt;&lt;a href&#61;&#34;/cart&#34; rel&#61;&#34;nofollow&#34;&gt;Carrinho&lt;/a&gt;&lt;/li&gt;
+
+                        &lt;li&gt;&lt;a href&#61;&#34;/pages/sobre-a-casa-do-codigo&#34; rel&#61;&#34;nofollow&#34;&gt;Sobre Nós&lt;/a&gt;&lt;/li&gt;
+
+                        &lt;li&gt;&lt;a href&#61;&#34;/pages/perguntas-frequentes&#34; rel&#61;&#34;nofollow&#34;&gt;Perguntas Frequentes&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;</code></pre>
+<p>Nós iremos trabalhar com a seguinte <code>li</code>: </p>
+<pre class="prettyprint"><code>&lt;li&gt;&lt;a href&#61;&#34;/cart&#34; rel&#61;&#34;nofollow&#34;&gt;Carrinho&lt;/a&gt;&lt;/li&gt;.</code></pre>
+<p>Vamos mudar o <code>/cart</code> para <code>/carrinho</code>. O código resultante será:</p>
+<pre class="prettyprint"><code>&lt;li&gt;&lt;a href&#61;&#34;/carrinho&#34; rel&#61;&#34;nofollow&#34;&gt;Carrinho&lt;/a&gt;&lt;/li&gt;</code></pre>
+<p>Não vamos nos preocupar com as <code>urls</code> neste momento, faremos elas funcionarem logo em seguida. </p>
+<p>A tag <code>article</code> tem o atributo <code>id</code>, gerado dinamicamente pelo sistema da <a href="http://www.casadocodigo.com.br" rel="nofollow">Casa do Código</a>. </p>
+<pre class="prettyprint"><code>&lt;article id&#61;&#34;livro-java8&#34; itemscope intemtype&#61;&#34;http://schema.org/Book&#34;&gt;
+          &lt;header id&#61;&#34;product-highlight&#34; class&#61;&#34;clearfix&#34;&gt;
+            &lt;div id&#61;&#34;product-overview&#34; class&#61;&#34;container&#34;&gt;
+              &lt;img itemprop&#61;&#34;image&#34; width&#61;&#34;280px&#34; height&#61;&#34;395px&#34; src&#61;&#34;http://cdn.shopify.com/s/files/1/0155/7645/products/css-eficiente-featured_large.png?v&#61;1435245145&#34; class&#61;&#34;product-featured-image&#34; /&gt;
+              &lt;h1 class&#61;&#34;product-title&#34; itemprop&#61;&#34;name&#34;&gt;Java 8 Prático: Lambdas, Streams e os novos recursos&lt;/h1&gt;
+
+              \...</code></pre>
+<p>Vamos fazer uma adaptação para que seja usado o <code>id</code> do produto exibido.</p>
+<p>Iremos apagar o seguinte trecho na primeira linha </p>
+<pre class="prettyprint"><code>itemscope intemtype&#61;&#34;http://schema.org/Book</code></pre>
+<p>E da mesma forma que fizemos no título da página, faremos o seguinte: <code>${produto.id}</code>. </p>
+<p>A tag <code>article</code> ficará assim: </p>
+<pre class="prettyprint"><code>&lt;article id&#61;&#34;${produto.id}&#34;&gt;</code></pre>
+<p>No arquivo disponibilizado da Casa do Código, na tag <code>h1</code> dentro da tag <code>article</code> faremos alterações para o texto <code>AQUI COLOQUE O TÍTULO</code>.  </p>
+<pre class="prettyprint"><code>\...
+  &lt;h1 class&#61;&#34;product-title&#34;&gt;AQUI COLOQUE O TÍTULO&lt;/h1&gt;
+              &lt;p class&#61;&#34;product-author&#34;&gt;
+                &lt;span class&#61;&#34;product-author-link&#34;&gt;
+
+                &lt;/span&gt;
+              &lt;/p&gt;</code></pre>
+<p>No lugar, iremo substituir pelo nome do produto. Já sabemos como fazer, certo? Podemos usar <code>${produto.titulo}</code>. A tag <code>h1</code> ficará assim: </p>
+<pre class="prettyprint"><code>&lt;h1 class&#61;&#34;product-title&#34;&gt;${produto.titulo}&lt;/h1&gt;</code></pre>
+<p>Onde temos o seguinte código:</p>
+<pre class="prettyprint"><code>&lt;p class&#61;&#34;book-description&#34;&gt;
+    AQUI COLOQUE A DESCRIÇÃO
+&lt;/p&gt;</code></pre>
+<p>Vamos trocar o texto <code>AQUI COLOQUE A DESCRIÇÃO</code> pela real descrição do livro através do produto: <code>${produto.descricao}</code>.</p>
+<pre class="prettyprint"><code>&lt;p class&#61;&#34;book-description&#34;&gt;
+    ${produto.description}
+&lt;/p&gt;</code></pre>
+<p>O código ficará assim:</p>
+<pre class="prettyprint"><code>&lt;header id&#61;&#34;product-highlight&#34; class&#61;&#34;clearfix&#34;&gt;
+   &lt;div id&#61;&#34;product-overview&#34; class&#61;&#34;container&#34;&gt;
+    &lt;img itemprop&#61;&#34;image&#34; width&#61;&#34;280px&#34; height&#61;&#34;395px&#34; src&#61;&#34;http://cdn.shopify.com/s/files/1/0155/7645/products/css-eficiente-featured_large.png?v&#61;1435245145&#34; class&#61;&#34;product-featured-image&#34; /&gt;
+
+    &lt;h1 class&#61;&#34;product-title&#34; itemprop&#61;&#34;name&#34;&gt;
+      ${produto.titulo} 
+    &lt;/h1&gt;
+    &lt;p class&#61;&#34;product-author&#34;&gt;
+       &lt;span class&#61;&#34;product-author-link&#34;&gt;
+
+   &lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p itemprop&#61;&#34;description&#34; class&#61;&#34;book-description&#34;&gt;${produto.descricao }&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+<p>Um pouco mais abaixo deste código encontraremos a parte do código <code>HTML</code> referente a compra dos livros. A parte do <code>HTML</code> que exibe os preços dos livros. As opções de preço são envolvidas pela tag <code>li</code>. Veja o código atual:</p>
+<pre class="prettyprint"><code>&lt;li class&#61;&#34;buy-option&#34;&gt;
+    &lt;input type&#61;&#34;radio&#34; name&#61;&#34;id&#34; class&#61;&#34;variant-radio&#34; id&#61;&#34;product-variant-9720393823&#34; value&#61;&#34;9720393823&#34;  checked&#61;&#34;checked&#34;  /&gt;
+    &lt;label  class&#61;&#34;variant-label&#34; for&#61;&#34;product-variant-9720393823&#34;&gt;
+      E-book &#43; Impresso 
+    &lt;/label&gt;
+    &lt;small class&#61;&#34;compare-at-price&#34;&gt;R$ 39,90&lt;/small&gt;
+    &lt;p class&#61;&#34;variant-price&#34;&gt;R$ 29,90&lt;/p&gt;
+&lt;/li&gt;</code></pre>
+<p>No cadastro de produtos, deixamos disponível três opções de preços: Ebook, Impresso e Combo. Vamos aproveitar as facilidades da <strong>Expression Language</strong> e fazer um <code>forEach</code> para repetir o código de opção de compra para as três opções que temos. Faremos uso da tag <code>forEach</code> da <strong>JSTL</strong>. O código deste <code>forEach</code> ficará dessa forma:</p>
+<pre class="prettyprint"><code>&lt;c:forEach items&#61;&#34;&#34; var&#61;&#34;preco&#34;&gt;
+    &lt;li class&#61;&#34;buy-option&#34;&gt;
+        &lt;input type&#61;&#34;radio&#34; name&#61;&#34;id&#34; class&#61;&#34;variant-radio&#34; id&#61;&#34;product-variant-9720393823&#34; value&#61;&#34;9720393823&#34;  checked&#61;&#34;checked&#34;  /&gt;
+        &lt;label  class&#61;&#34;variant-label&#34; for&#61;&#34;product-variant-9720393823&#34;&gt;
+          E-book &#43; Impresso 
+        &lt;/label&gt;
+        &lt;small class&#61;&#34;compare-at-price&#34;&gt;R$ 39,90&lt;/small&gt;
+        &lt;p class&#61;&#34;variant-price&#34;&gt;R$ 29,90&lt;/p&gt;
+    &lt;/li&gt; 
+&lt;/c:forEach&gt;</code></pre>
+<p>Note que a tag <code>li</code> que estamos modificando está dentro de um formulário. Ou seja, envolvido por uma tag <code>form</code>. Cada <code>li</code> no código da se refere a uma variante do produto, que podem ser: Ebook, Impresso ou Combo. Na <a href="http://www.casadocodigo.com.br" rel="nofollow">Casa do Código</a> cada uma dessas variações tem um <code>id</code> próprio, mas em nosso caso não. Temos variações de preços, mas não de produtos.</p>
+<p>Sendo assim, iremos remover o valor do atributo <code>id</code> do <code>input type&#61;&#34;radio&#34;</code> fazendo com que o código fique desta forma:</p>
+<pre class="prettyprint"><code>&lt;c:forEach items&#61;&#34;&#34; var&#61;&#34;preco&#34;&gt;
+    &lt;li class&#61;&#34;buy-option&#34;&gt;
+        [...]
+        &lt;input type&#61;&#34;radio&#34; name&#61;&#34;id&#34; class&#61;&#34;variant-radio&#34; id&#61;&#34;&#34; value&#61;&#34;9720393823&#34;  checked&#61;&#34;checked&#34;  /&gt;
+        [...]
+    &lt;/li&gt; 
+&lt;/c:forEach&gt;</code></pre>
+<p>Dessa forma, perdemos a referência para o produto a ser adicionado ao carrinho de compras do nosso sistema. Este formulário que estamos modificando é o que adiciona produtos no carrinho. Precisamos de alguma referência do produto a ser adicionado no carrinho. Vamos criar um novo <code>input</code>, mas desta vez sendo do tipo <code>hidden</code>, configurando o valor desse <code>input</code> para ser o <code>id</code> do produto e o <code>name</code> como sendo <code>produtoId</code>. Este código deve vir antes do <code>forEach</code>.</p>
+<pre class="prettyprint"><code>&lt;input type&#61;&#34;hidden&#34; value&#61;&#34;${produto.id}&#34; value&#61;&#34;produtoId&#34; /&gt;</code></pre>
+<p>Agora que temos uma referência ao produto, precisamos deixar disponível também uma referência ao tipo de preço a ser escolhido pelo usuário na hora da compra. Modificamos anteriormente o <code>input type&#61;&#34;radio&#34;</code> no qual o usuário selecionava uma variante do produto. No nosso caso, temos variantes de preço. Vamos adaptar isso também. </p>
+<p>O <code>input type&#61;&#34;radio&#34;</code> agora deve referenciar os tipos de preços que temos em nosso sistema. seu atributo <code>name</code> então deve ter valor definido como <code>tipo</code> assim como seu <code>id</code>. E o atributo <code>value</code> deve ter seu valor definido como o tipo de preço do produto. Algo como: <code>${preco.tipo}</code>.</p>
+<p>No <code>label</code> que se encotra logo abaixo do <code>input type&#61;&#34;radio&#34;</code> deve ser exibido o tipo de preço. Então em vez de:</p>
+<pre class="prettyprint"><code>&lt;label  class&#61;&#34;variant-label&#34; for&#61;&#34;product-variant-9720393823&#34;&gt;
+  E-book &#43; Impresso 
+&lt;/label&gt;</code></pre>
+<p>Teremos:</p>
+<pre class="prettyprint"><code>&lt;label  class&#61;&#34;variant-label&#34;&gt;
+    ${preco.tipo}
+&lt;/label&gt;</code></pre>
+<p>Removemos o atributo <code>for</code> porque não precisamos dele e também para deixar o código um pouco mais simples.A tag <code>p</code> abaixo do <code>label</code> exibe o valor do produto, o preco! Até aqui só exibimos informações referentes ao tipo do preço. Não podemos esquecer do valor. Exibiremos então o valor do preço atravéz do código: <code>${preco.valor}</code>. A tag <code>p</code> que se encontra assim:</p>
+<pre class="prettyprint"><code>&lt;p class&#61;&#34;variant-price&#34;&gt;R$ 29,90&lt;/p&gt;</code></pre>
+<p>Ficará assim:</p>
+<pre class="prettyprint"><code>&lt;p class&#61;&#34;variant-price&#34;&gt;${preco.valor}&lt;/p&gt;</code></pre>
+<p>A última mudança que precisamos fazer no formulário de adição produtos no carrinho é referente ao atributo <code>title</code> do botão no final do formulário. Este botão é do tipo <code>submit</code>, responsável por fazer o envio dos dados do formulário. O botão contém o atributo <code>title</code> da seguinte forma: <code>title&#61;&#34;Compre Agora&#34;</code>. </p>
+<pre class="prettyprint"><code> &lt;button type&#61;&#34;submit&#34; class&#61;&#34;submit-image icon-basket-alt&#34; alt&#61;&#34;Compre Agora&#34; title&#61;&#34;Compre Agora&#34;&gt;&lt;/button&gt;</code></pre>
+<p>Vamos compor este título com o nome do livro, para ficar mais intuitivo. Desta forma o atributo do botão ficará da seguinte forma:</p>
+<pre class="prettyprint"><code>title&#61;&#34;Compre Agora ${produto.titulo}!&#34;</code></pre>
+<p><strong>Observação</strong>: Não esqueça de atualizar os outros pontos do código que se referem ao carrinho de compras. Modificamos o <code>/cart</code> para <code>/carrinho</code> lembra? Essa mudança também ocorre na <code>action</code> do formulário que estava assim:  </p>
+<pre class="prettyprint"><code>
+&lt;form action&#61;&#34;/cart/add&#34; method&#61;&#34;post&#34; class&#61;&#34;container&#34;&gt;</code></pre>
+<p>E ficou assim: </p>
+<pre class="prettyprint"><code>&lt;form action&#61;&#34;/carrinho/add&#34; method&#61;&#34;post&#34; class&#61;&#34;container&#34;&gt;</code></pre>
+<p>O código completo do formulário com todas as modificações que fizemos até aqui ficará da seguinte forma:</p>
+<pre class="prettyprint"><code> &lt;form action&#61;&#34;/carrinho/add&#34; method&#61;&#34;post&#34; class&#61;&#34;container&#34;&gt;
+    &lt;ul id&#61;&#34;variants&#34; class&#61;&#34;clearfix&#34;&gt;
+        &lt;input type&#61;&#34;hidden&#34; name&#61;&#34;produtoId&#34; value&#61;&#34;${produto.id}&#34; /&gt;
+        &lt;c:forEach items&#61;&#34;&#34; var&#61;&#34;preco&#34;&gt;
+          &lt;li class&#61;&#34;buy-option&#34;&gt;
+            &lt;input type&#61;&#34;radio&#34; name&#61;&#34;tipo&#34; class&#61;&#34;variant-radio&#34; id&#61;&#34;tipo&#34; value&#61;&#34;${preco.tipo}&#34;  checked&#61;&#34;checked&#34;  /&gt;
+            &lt;label  class&#61;&#34;variant-label&#34;&gt;
+              ${preco.tipo} 
+            &lt;/label&gt;
+            &lt;small class&#61;&#34;compare-at-price&#34;&gt;R$ 39,90&lt;/small&gt;
+            &lt;p class&#61;&#34;variant-price&#34;&gt;${produto.titulo}&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/c:forEach&gt;           
+    &lt;/ul&gt;
+    &lt;button type&#61;&#34;submit&#34; class&#61;&#34;submit-image icon-basket-alt&#34; alt&#61;&#34;Compre Agora&#34; title&#61;&#34;Compre Agora${produto.titulo}&#34;&gt;&lt;/button&gt;
+  &lt;/form&gt;</code></pre>
+<p>Não se preocupe com as partes que não modificamos. Estamos adaptando o código as nossas necessidades e ainda vamos continuar modificando nos próximos passos.</p>
+<p>Antes do final da tag <code>article</code> existe uma tag <code>section</code> que deve exibir algumas informações que também são importantes de serem mostradas. Como o número de páginas e a data de publicação. Veja o código dessa seção abaixo:</p>
+<pre class="prettyprint"><code>&lt;section class&#61;&#34;data product-detail&#34;&gt;
+    &lt;h2 class&#61;&#34;section-title&#34;&gt;Dados do livro:&lt;/h2&gt;
+    &lt;p&gt;Número de páginas: &lt;span&gt;AQUI O NÚMERO DE PÁGINAS&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;Data de publicação: AQUI A DATA DE PUBLICAÇÃO &lt;/p&gt;
+    &lt;p&gt;Encontrou um erro? &lt;a href&#61;&#39;/submissao-errata&#39; target&#61;&#39;_blank&#39;&gt;Submeta uma errata&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+<p>Vamos exibir o número de páginas através de: <code>${produto.paginas}</code> e a data de lançamento da seguinte forma: <code>${produto.dataLancamento}</code>. Depois dessas mudanças o código da seção ficará assim:</p>
+<pre class="prettyprint"><code>&lt;section class&#61;&#34;data product-detail&#34;&gt;
+    &lt;h2 class&#61;&#34;section-title&#34;&gt;Dados do livro:&lt;/h2&gt;
+    &lt;p&gt;Número de páginas: &lt;span&gt;${produto.paginas}&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;Data de publicação: ${produto.dataLancamento}&lt;/p&gt;
+    &lt;p&gt;Encontrou um erro? &lt;a href&#61;&#39;/submissao-errata&#39; target&#61;&#39;_blank&#39;&gt;Submeta uma errata&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+<p>Nossa página de detalhe com todas as modificações que fizemos até aqui está pronta. Precisamos agora criar um novo método na classe <code>ProdutosController</code> que faça a seguinte tarefa: Buscar um produto usando o <code>id</code> e deixar este produto disponível na <code>view</code> de detalhes, ou seja, no arquivo <code>detalhe.jsp</code>. </p>
+<p>Chamaremos este novo método de <code>detalhe</code>. Ele precisa fazer o mapeamento para a url <code>/detalhe</code> através da anotação <code>&#64;RequestMapping</code> e receber um <code>id</code> do tipo <code>int</code>. Após isto, precisaremos criar um objeto do tipo <code>ModelAndView</code> passando para o construtor da classe do <code>ModelAndView</code> o caminho da <code>view</code> a ser utilizada. A view a ser utilizada será <code>detalhe.jsp</code>,  que acabamos de criar.   </p>
+<p>No próximo passo, usaremos o objeto <code>produtoDao</code> que temos no <code>ProdutosController</code> para buscar os livros pelo <code>id</code> e atribui-lo a um outro objeto da classe <code>Produto</code>. O método que faz a busca se chamará <code>find</code>. Ainda não temos o método da busca, mas vamos deixar a parte do controller pronta. O código ficará assim:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/detalhe&#34;)
+public ModelAndView detalhe(int id){
+    ModelAndView modelAndView &#61; new ModelAndView(&#34;/produtos/detalhe&#34;);
+    Produto produto &#61; produtoDao.find(id);
+    modelAndView.addObject(&#34;produto&#34;, produto);
+    return modelAndView;
+}</code></pre>
+<p>Em seguida, iremos criar o método <code>find</code> na classe <code>ProdutoDAO</code> para que receba um <code>id</code> e retorne um objeto da classe <code>Produto</code>. Para esta tarefa utilizaremos o objeto <code>manager</code> da classe <code>ProdutoDAO</code> para buscar o produto através do método <code>find</code>, que requer dois parâmetros. O primeiro se refere à classe representante da entidade na qual o produto será buscado. O segundo será o próprio <code>id</code>. O valor do primeiro parâmetro será <code>Produto.class</code>. No fim, retornaremos o resultado dessa busca. O código ficará dessa forma:</p>
+<pre class="prettyprint"><code>public Produto find(int id){
+    return manager.find(Produto.class, id);
+}</code></pre>
+<p>A página de detalhes deve funcionar e já estamos fazendo a busca pelo produto no banco de dados. Também implementamos a lógica que busca o produto e envia o produto para a <code>view</code> no <code>ProdutosController</code>. Logo, poderemos exibir os dados do produto no arquivo <code>detalhe.jsp</code> que é a nossa <code>view</code>.</p>
+<p>Mas como faremos para acessar a páginas de detalhes de um produto? Vamos precisar passar o <code>id</code> para que o produto possa ser buscado e exibido. Podemos tentar acessar diretamente pela <code>url</code>. O <code>id</code> pode ser passado na <code>url</code> da seguinte forma: <code>detalhe?id&#61;4</code>. Sendo assim, podemos montar a seguinte <code>url</code> para exibir os detalhes de um determinado livro:</p>
+<pre class="prettyprint"><code>localhost:8080/casadocodigo/produtos/detalhe?id&#61;4</code></pre>
+<p>Agora, é possível ver a página de detalhes de um livro. Alguns detalhes poderão não ser exibidos corretamente - isso é perfeitamente normal -, porque não fizemos todas as adaptações necessárias ainda. Os preços são uma das informações que não serão exibidas corretamente, considerando que não o escrevemos da forma correta. Veremos como ele esta agora: </p>
+<pre class="prettyprint"><code>&lt;c:forEach items&#61;&#34;&#34; var&#61;&#34;preco&#34;&gt;
+  &lt;li class&#61;&#34;buy-option&#34;&gt;
+    &lt;input type&#61;&#34;radio&#34; name&#61;&#34;tipo&#34; class&#61;&#34;variant-radio&#34; id&#61;&#34;tipo&#34; value&#61;&#34;${preco.tipo}&#34;  checked&#61;&#34;checked&#34;  /&gt;
+    &lt;label  class&#61;&#34;variant-label&#34;&gt;
+      ${preco.tipo} 
+    &lt;/label&gt;
+    &lt;small class&#61;&#34;compare-at-price&#34;&gt;R$ 39,90&lt;/small&gt;
+    &lt;p class&#61;&#34;variant-price&#34;&gt;${preco.valor}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/c:forEach&gt;</code></pre>
+<p>Perceba que não preenchemos o atributo <code>items</code> do <code>forEach</code>. Devemos passar, para este atributo, a lista de preços presente no produto dessa forma:</p>
+<pre class="prettyprint"><code>&lt;c:forEach items&#61;&#34;${produto.precos}&#34; var&#61;&#34;preco&#34;&gt;
+  &lt;li class&#61;&#34;buy-option&#34;&gt;
+    &lt;input type&#61;&#34;radio&#34; name&#61;&#34;tipo&#34; class&#61;&#34;variant-radio&#34; id&#61;&#34;tipo&#34; value&#61;&#34;${preco.tipo}&#34;  checked&#61;&#34;checked&#34;  /&gt;
+    &lt;label  class&#61;&#34;variant-label&#34;&gt;
+      ${preco.tipo} 
+    &lt;/label&gt;
+    &lt;small class&#61;&#34;compare-at-price&#34;&gt;R$ 39,90&lt;/small&gt;
+    &lt;p class&#61;&#34;variant-price&#34;&gt;${preco.valor}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/c:forEach&gt;</code></pre>
+<p>Se atualizamos a página agora, teremos um erro:</p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_10_lazy_inicialization_exception.png" alt="Erro LazyInitializationException" /></p>
+<p>Este erro de <code>LazyInitializationException</code> indica que ao carregar o produto, os preços não foram carregados juntos. Ou seja, tentamos exibir os preços sem carregá-los do banco de dados. Isto acontece porque nosso <code>ProdutoDAO</code> no método <code>find</code> só busca o produto, sem se relacionar com seus preços.</p>
+<p>Precisamos então fazer com que o <strong>Hibernate</strong> relacione os produtos com seus preços. Faremos isto através de uma <em>query</em> personalizada:</p>
+<pre class="prettyprint"><code>select distinct(p) from Produto p join fetch p.precos precos where p.id &#61; :id</code></pre>
+<p>Observe que estamos fazendo um <code>select</code> comum, mas estamos usando o <code>distinct</code> para que o <strong>Hibernate</strong> nos retorne apenas resultados diferentes. Estamos também fazendo um <code>join fetch</code> com a tabela <code>Precos</code> usando como relação o <code>id</code> do produto presente na tabela de preços.</p>
+<p>Usaremos o <code>sql</code> através do método <code>createQuery</code> e passaremos o <code>:id</code> através do método <code>setParameter</code>. Queremos retornar apenas um resultado desta <em>query</em> através do método <code>getSingleResult</code>. Nosso método <code>find</code> ficará assim: </p>
+<pre class="prettyprint"><code>return manager.createQuery(&#34;select distinct(p) from Produto p join fetch p.precos precos where p.id &#61; :id&#34;, Produto.class).setParameter(&#34;id&#34;, id).getSingleResult();</code></pre>
+<p>Para que não precisemos ficar chutando <code>ids</code> diretamente na <code>url</code>. Criaremos links na listagem e assim poderemos clicar em um determinado produto e já visualizar a página de detalhes do produto. Faremos isso no arquivo <code>lista.jsp</code> usando o construtor de <code>urls</code> do <strong>Spring</strong>. Lembra do <code>mvcUrl</code>? Iremos usa-lo novamente aqui. </p>
+<p>Passaremos o <code>id</code> para o <code>mvcUrl</code> através do método <code>arg</code> que recebe dois parâmetros: o primeiro será a posição do parametro, que terá valor <code>0</code>. O segundo será o valor do parâmetro, o <code>produto.id</code>.</p>
+<pre class="prettyprint"><code>&lt;a href&#61;&#34;${s:mvcUrl(&#39;PC#detalhe&#39;).arg(0, produto.id).build()}&#34;&gt;${produto.titulo}&lt;/a&gt;</code></pre>
+<p><strong>Observação</strong>: Estamos construindo o link para a página de detalhes do produto na listagem dos produto. Este link deve ser criado de forma a envolver o título do livro na listagem. Lembre-se de importar a <code>taglib</code> do <strong>Spring</strong> para poder usar o <code>mvcUrl</code> da mesma forma que fizemos no <code>form.jsp</code> usando o <strong><em>import</em></strong>: <code>&lt;%&#64; taglib uri&#61;&#34;http://www.springframework.org/tags&#34; prefix&#61;&#34;s&#34; %&gt;</code>.</p>
+<p>Mas veja como está ficando nossa <code>url</code>: <code>http://localhost:8080/casadocodigo/produtos/detalhe?id&#61;2</code>. </p>
+<p>Observe como são as <code>urls</code> do site da <a href="http://www.casadocodigo.com.br" rel="nofollow">Casa do Código</a>:</p>
+<pre class="prettyprint"><code>https://www.casadocodigo.com.br/products/livro-code-igniter</code></pre>
+<p>Elas parecem mais interessantes, porque mostram o nome do produto. Estas <code>urls</code> são chamadas de <strong>URLs Amigaveis</strong>. </p>
+<p>Nós não mudaremos nossas <code>urls</code> para ficarem amigaveis desta forma, mas faremos com que o parâmetro seja passado de forma diferente. Veja como nossa <code>url</code> parece mais simples usando o seguinte formato:</p>
+<pre class="prettyprint"><code>http://localhost:8080/casadocodigo/produtos/detalhe/2</code></pre>
+<p>Eliminaremos o <code>?id&#61;</code> e deixaremos nossas <code>urls</code> mais simples. </p>
+<p>Para isto, precisamos mudar a assinatura do método <code>detalhe</code> em nosso <code>ProdutosController</code>. Ela precisa receber o parâmetro separado pela barra (<code>/</code>). A anotação <code>&#64;RequestMapping</code> permite que façamos isso da seguinte forma: </p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/detalhe/{id}&#34;)</code></pre>
+<p>Mas apenas isto não é o suficiente. Precisaremos indicar para o método <code>detalhe</code> que o parâmetro <code>id</code> será recuperado do caminho da <code>url</code>. Então, usaremos uma nova anotação: <code>&#64;PathVariable</code> passando o <code>id</code> desta forma: <code>&#64;PathVariable(&#34;id&#34;)</code>.</p>
+<p>Com as alterações o método <code>detalhe</code> da classe <code>ProdutosController</code> ficará assim:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/detalhe/{id}&#34;)
+public ModelAndView detalhe(&#64;PathVariable(&#34;id&#34;) Integer id){
+    ModelAndView modelAndView &#61; new ModelAndView(&#34;/produtos/detalhe&#34;);
+    Produto produto &#61; produtoDao.find(id);
+    modelAndView.addObject(&#34;produto&#34;, produto);
+    return modelAndView;
+}</code></pre>
+<p>Algumas coisas ainda não estão prontas - nossas datas ainda não são exibidas corretamente. Mas corrigiremos isso em breve.</p>
+<p>Por enquanto, faremos alguns exercícios para fixar o que vimos até aqui. Mas já aprendemos como relacionar os produtos com seus preços, criar a página de detalhes do produto e configurar as <code>urls</code> para ficarem amigáveis.</p>
+
+		</div>
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+				
+
+
+
+<section class="task-actions">
+	<div class="container">
+		
+
+
+
+
+
+<a href="/forum/curso-spring-mvc-1-criando-aplicacoes-web/exercicio-url-amigaveis/11461/novo" class=" task-actions-button task-actions-button-forum" data-amplitude-onsubmit='{"name":"help-needed","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11461","task-kind":"Explicação"}'>Tirar Dúvida</a><!--
+		 --><a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11461/next" class="task-actions-button task-body-actions-button task-actions-button-next">Próxima Atividade</a>
+	</div>
+</section>
+			
+		</main>
+	</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+<aside class="task-menu">
+	<section class="task-menu-header">
+		<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class='openMenu-button task-menu-button '></button>
+		<div class="task-menu-header-info">
+			<a class="task-menu-header-info-title" href="/course/spring-mvc-1-criando-aplicacoes-web" title="Ir para página do curso">
+				<img src="https://www.alura.com.br/assets/api/cursos/spring-mvc-1-criando-aplicacoes-web.svg" alt="ícone Spring MVC I: Criando aplicações web" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px"/>
+				<h2 class="task-menu-header-info-title-text">Spring MVC I: Criando aplicações web</h2>
+			</a>
+			<div class="task-menu-header-info-progress">
+				
+				<span class="task-menu-header-info-progress-percentage ">42%</span>
+				<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 42%, transparent 42%);"></span>
+			</div>
+		</div>
+	</section>
+	
+	<section class="task-menu-section">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>10</strong>
+				<span>de 14</span></span>
+			<h3 class="task-menu-section-title-text">
+				Url amigáveis
+			</h3>
+		</div>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			Atividades
+			<span>2 de 7</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11460" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO" />
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Vídeo 1">
+							Vídeo 1
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">37min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11461" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION" />
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Url amigáveis">
+							Url amigáveis
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11462" class="task-menu-nav-item-link task-menu-nav-item-link-TEXT_CONTENT">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Atividade sem Resposta do Aluno não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#TEXT_CONTENT" />
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Fazendo o download da página da casa do código">
+							Fazendo o download da página da casa do código
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11463" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Carregando a tela de detalhe com os dados">
+							Carregando a tela de detalhe com os dados
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11464" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Criando o método que seleciona um produto">
+							Criando o método que seleciona um produto
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11465" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">06</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Adicionando link na listagem">
+							Adicionando link na listagem
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11466" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">07</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Trabalhando com url amigáveis">
+							Trabalhando com url amigáveis
+						</span>
+						
+					</a>
+				</li>
+			
+		</ul>
+	</nav>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aulas
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href='/course/spring-mvc-1-criando-aplicacoes-web/section/'+this.value;">
+			
+				<option value="1" >01. Começando com SpringMVC</option>
+			
+				<option value="2" >02. Cadastro de produtos</option>
+			
+				<option value="3" >03. Cadastro de preços do produto</option>
+			
+				<option value="4" >04. Listando os produtos</option>
+			
+				<option value="5" >05. Redirect com Escopo de Flash</option>
+			
+				<option value="6" >06. Validação e conversão de dados</option>
+			
+				<option value="7" >07. Mais Validações </option>
+			
+				<option value="8" >08. Formatação de datas</option>
+			
+				<option value="9" >09. Enviando arquivos ao servidor</option>
+			
+				<option value="10" selected>10. Url amigáveis</option>
+			
+				<option value="11" >11. Expondo atributos no jsp</option>
+			
+				<option value="12" >12. Escopo sessão</option>
+			
+				<option value="13" >13. Carrinho de compras</option>
+			
+				<option value="14" >14. Finalizando o carrinho</option>
+			
+		</select>
+	</section>
+	<section class="task-menu-others">
+		<h2 class="task-menu-others-title ">
+			Outros Links
+		</h2>
+		<a href="/forum/curso-spring-mvc-1-criando-aplicacoes-web/todos" class="task-menu-others-link task-menu-others-link-forum " title="Ir para o fórum do curso">Fórum</a>
+		<a href="/dashboard" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
+	</section>
+	<section class="task-menu-footer">
+		<a class="task-menu-footer-user" href="/user/altair-lage" title="Ir para sua página de usuário">
+			<img src="https://www.gravatar.com/avatar/846d7bad034e3c292bc8e433e11b4683.png?r=PG&size=60x60&d=https%3A%2F%2Fcursos.alura.com.br%2Fimages%2Fforum%2Favatar_a.png" alt="Gravatar de Altair Lage" class="task-menu-footer-img" width="40px" height="40px"/>
+			
+				<p class="task-menu-footer-detalhes">
+					<span class="task-menu-footer-detalhes-nome">Altair Lage</span>
+					<span class="task-menu-footer-detalhes-xp">
+						27.4k xp
+					</span>
+				</p>
+			
+			<input type="hidden" value="" />
+			<input type="hidden" value="" />
+		</a>
+		<a href="/dashboard" class="task-menu-footer-logo">
+			<img src="/images/gnarus/classPage/icon-menu-alura.svg" alt="Logo da Alura" class="task-menu-footer-logo-image" width="19px" height="32px" title="Ir para a página principal" />
+		</a>
+	</section>
+</aside>
+</section>
+
+
+
+
+	<script src="/script/lib/jquery2/jquery-2.1.3.min.js"></script>
+	<script src="/script/gnarus/block/buttonToggle.js" async></script>
+	<script src="/script/gnarus/block/sectionMenu.js" async></script>
+
+	<script src="/script/lib/marked.js"></script>
+	<script src="/script/gnarus/block/markdownEditor.js" async></script>
+	<script src="/script/gnarus/block/caret.js" async></script>
+	<script src="/js/gnarus/keydownWatchers.js" async></script>
+	<script src="/js/prettify.js" async></script>
+
+	<script src="/script/gnarus/block/preventsDoubleClick.js" async></script>
+	<script src="/script/gnarus/block/assessment.js" async></script>
+	<script src="/script/gnarus/block/login-form.js" async></script>
+	<script src="/script/gnarus/classPage/classPage.js"></script>
+	<script src="/script/gnarus/classPage/aria.js"></script>
+	<script src="/script/gnarus/classPage/phrase.js"></script>
+	<script src="/script/gnarus/classPage/feedback.js"></script>
+	
+	
+
+	
+	
+	
+	
+
+	<script src="/script/musicdot/partitura.js"></script>
+	<script src="/script/gnarus/classPage/audioProgress.js"></script>
+
+	
+	
+	
+		
+
+<script type="text/javascript" src="/js/amplitude.js"></script>
+
+<script>
+
+	amplitudeInit("84647047775d06b4051d80eccd387bd3");
+	
+	
+		var userProperties = {"name":"Altair Lage","email":"altair.lage@datablink.com"};
+		amplitudeIdentify("75042", userProperties);
+	
+	
+	
+
+	
+	
+	$('[data-amplitude]').on('click', function(){
+		var data = $(this).data().amplitude;
+		track(data);
+	});
+	
+</script>
+
+		
+		
+			<script>
+				track({"name":"task-seen","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11461","task-kind":"Explicação"});
+			</script>
+		
+	
+	
+ 
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"b5f9030682","agent":"","beacon":"bam.nr-data.net","applicationTime":51,"applicationID":"12544460","transactionName":"ZVFTNhEEXEdTWkdeV1wbchcQEV1ZHVtBGVtdWR8BAgBeQV8XVFlZQEFCTAsEQFhXQEJCUVxaHwEMC0ZGXVVfUkocZ1QBFwxdWnFWXUNKXVhdBxFKQVxdTmdWS1k=","queueTime":0}</script></body>
+</html>

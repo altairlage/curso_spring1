@@ -1,0 +1,43 @@
+(function(){
+	
+	$('.uiSectionVideo-classMode-checkbox').on('change', function(){
+		$('.sectionMenu, .uiSectionVideo-classMode-off, .uiSectionVideo-classMode-on').toggle();
+		$('.sectionContent-mainContent').toggleClass('sectionContent-mainContent-classMode');
+	});
+
+	var mediaQuery = window.matchMedia('(min-width: 900px)');
+
+	(function menuMobile(){
+
+		var link = document.querySelector('.sectionMenu-openAction');
+		if (!link) return;
+		
+		var menu = document.querySelector('.sectionMenu');
+		var html = document.documentElement;
+
+		function abreFechaMenu() {
+			if (mediaQuery.matches) return;
+
+			html.classList.toggle('sectionMenuIsOpen');
+			menu.classList.toggle('sectionMenu_open');
+			link.classList.toggle('sectionMenu_closed');
+		}
+
+		link.addEventListener('click', abreFechaMenu);
+
+		html.addEventListener('click', function(event){
+			if (event.target === html) {
+				abreFechaMenu();
+			}
+		});
+
+		mediaQuery.addListener(function(){
+			if (mediaQuery.matches) {
+				html.classList.remove('sectionMenuIsOpen');
+				menu.classList.remove('sectionMenu_open');
+			}
+		});
+
+	})();
+
+})();

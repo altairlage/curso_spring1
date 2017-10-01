@@ -1,0 +1,36 @@
+(function(Task, Choiceable){
+
+	Choiceable.setup();
+
+	$('.alternativeList-item-input').on('click', function(e){
+		var label = $(this).parent();
+		if(Choiceable.isChecked(label)) return;
+		$('.singleChoice-count').removeClass('singleChoice-count--active');
+		removeAllLabelsClass();
+		Choiceable.toggleLabelClass(label);
+		Choiceable.showAlternativeOpinionsAndNextButton();
+		label.addClass('alternativeList-item--answered');
+		var isCorrect = label.data("correct") == true;
+
+		var feedbackText = isCorrect ? 'Parabéns, você acertou!' : 'Não foi desta vez! Tente novamente';
+
+		if(isCorrect)
+			Choiceable.disableAllAlternatives();
+		$('.choiceable-aria-feedback').text(feedbackText);
+		shouldSubmit = $('.singleChoice').attr('data-should-submit-answer');
+		if(shouldSubmit == "true") {
+			Task.submitAnswer();
+			//submitAmplitude only works in production, please comment line in dev or js will fail
+			Choiceable.submitAmplitudeTaskAnswered();
+			Choiceable.updateSubmitAnswerIf(isCorrect);
+		}
+		Choiceable.showAlternativeOpinions();
+	});
+
+	function removeAllLabelsClass(){
+		var label = $('.alternativeList-item');
+		label.removeClass('alternativeList-item--checked');
+		label.removeClass('alternativeList-item--answered');
+	};
+
+})(Task, Choiceable);

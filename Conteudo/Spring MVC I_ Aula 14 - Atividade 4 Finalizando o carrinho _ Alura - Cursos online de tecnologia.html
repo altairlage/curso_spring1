@@ -1,0 +1,724 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR" data-product="alura">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>Spring MVC I: Aula 14 - Atividade 4 Finalizando o carrinho | Alura - Cursos online de tecnologia</title>
+	
+	
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="/images/alura/favicon.ico">
+	
+	<link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans:400,300,600,700,800|Source+Serif+Pro' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	
+	<link rel="stylesheet" href="/style/lib/video-js.fcfc2231.css">
+    <link rel="stylesheet" href="/style/lib/video-js-resolutions.b7de6fd3.css">
+    <link rel="stylesheet" href="/style/lib/prettify.1b9e73a7.css">
+
+	<link rel="stylesheet" href="/style/gnarus/base.78b97371.css">
+	<link rel="stylesheet" href="/style/gnarus/block/formattedText.781e69ae.css">
+	
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/container.d7849dcf.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/classPage.21eeda42.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/menuSettings.da4e6ad5.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/alternativeList.0fb16f2e.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskFeedback.4bdd6c19.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/markdown.19173ffa.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/finishSection.0a96466a.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/phrase.6d880b7f.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/hqexplanation.3ed41021.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/openquestion.811813bb.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/textcontent.7298b79f.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/video.45bb70c3.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/singlechoice.05e6d21d.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/music.324695f6.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/multiplechoice.9df58fa7.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/videodialog.fc98d79c.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/fillintheblank.81cde842.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/speakingpractice.5068bb32.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/pronunciationpractice.7d2876f7.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/repetition.0dac6920.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/genericVideo.2942980e.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskContent.000f28c0.css">
+	<link rel="stylesheet" href="/style/gnarus/page/classPage/taskButtons.563efe7a.css">
+	<link rel="stylesheet" href="/style/gnarus/block/markdownEditor.26173654.css">
+	<link rel="stylesheet" href="/style/gnarus/block/audioPlayer.be1ece2d.css">
+
+	
+	
+	<style type="text/css">
+		.task:before {
+			background-color: #FFE000;
+		}
+	</style>
+	
+	
+	
+	</head>
+<body>
+
+<section class='task' data-task-type="hqexplanation" data-task-id="11490" data-author-id="75042" data-course-code="spring-mvc-1-criando-aplicacoes-web" data-section-number="14" data-domain="cursos.alura.com.br" data-hasFeedbackAnswer="false" data-url-prefix="/">
+	<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class='openMenu-button task-body-button '></button>
+	
+	<section class="task-body">
+		<header class="task-body-header">
+			<div class="container">
+				<h1 class="task-body-header-title">
+					<svg class="task-body-header-title-svg" aria-label="Atividade de Explicação">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION" />
+					</svg>
+					<small>04</small>
+					<span class="task-body-header-title-text"> Finalizando o carrinho</span>
+				</h1>
+				<div class="task-body-header-actions">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11490/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
+				</div>
+			</div>
+		</header>
+		<main class="task-body-main" data-should-warn="false">
+			
+
+
+
+
+
+	
+		
+
+
+
+
+<section class="hqExplanation" id="task-content">
+	<div class="container">
+	
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações"></button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o Player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="/suggestions/new/spring-mvc-1-criando-aplicacoes-web/11490/question">Sugerir Melhoria</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+		<div class="formattedText">
+			<h1>Finalizando o carrinho</h1>
+<p>Nosso carrinho de compras já funciona. Além de listar os produtos escolhidos, ele mostrará o total da soma dos preços dos produtos. O que falta fazer para que a aplicação fique completa é que ao clicar no botão de finalização da compra, a compra seja registrada.</p>
+<p>Já que a compra é algo especifico e diferente da lógica do carrinho, criaremos um novo <strong><em>controller</em></strong> para podermos implementar tal funcionalidade. Crie uma nova classe chamada <code>PagamentoController</code> e a defina como <strong><em>controller</em></strong> assinando a mesma com a anotação <code>&#64;Controller</code>. Defina também o caminho que o <strong><em>controller</em></strong> irá atender através da anotação <code>&#64;RequestMapping</code> com o valor <code>/pagamento</code>.</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/pagamento&#34;)
+&#64;Controller
+public class PagamentoController {
+
+}</code></pre>
+<p>Neste <strong><em>controller</em></strong> criaremos um método responsável por finalizar as compras dos usuários. Chamaremos este método de <code>finalizar</code> e ele retornará um objeto do tipo <code>ModelAndView</code> redirecionando o usuário para a listagem dos produtos ou seja <code>redirect:/produtos</code>.  Este método também será anotado com a anotação <code>&#64;RequestMapping</code> usando o valor <code>/finalizar</code>.</p>
+<p>O método <code>finalizar</code> não precisa receber nenhum parâmetro, mas ele precisa do carrinho de compras. O carrinho de compras já está no escopo de sessão e para que o tenhamos em mãos, precisamos apenas criar um novo atributo na classe <code>PagamentoController</code> do tipo <code>CarrinhoCompras</code> anotado com <code>&#64;Autowired</code>. Desta forma o <strong>Spring</strong> já busca a atribui o carrinho de compra em nosso <strong><em>controller</em></strong>. Por hora, vamos apenas imprimir o total da compra e redirecionar. Até aqui teremos:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/pagamento&#34;)
+&#64;Controller
+public class PagamentoController {
+
+    &#64;Autowired
+    CarrinhoCompras carrinho;
+    &#64;RequestMapping(&#34;/finalizar&#34;)
+    public ModelAndView finalizar(){
+        System.out.println(carrinho.getTotal());
+        return new ModelAndView(&#34;redirect:/produtos&#34;);
+    }
+}</code></pre>
+<p>Parece estranho redirecionar o usuário e não informá-lo se o processo funcionou bem. Pensando nisto, vamos fazer uso da classe <code>RedirectAttributes</code> que chamaremos de <code>model</code> e do método <code>addFlashAttribute</code> para exibirmos uma mensagem amigável para o usuário. Nos campos de chave e valor do método <code>addFlashAttributes</code> usaremos <code>sucesso</code> e <code>Pagamento Realizado com Sucesso</code> respectivamente.</p>
+<pre class="prettyprint"><code>    model.addFlashAttribute(&#34;sucesso&#34;, &#34;Pagamento Realizado com Sucesso&#34;);</code></pre>
+<p>Com as alterações, o nosso código ficará assim:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/pagamento&#34;)
+&#64;Controller
+public class PagamentoController {
+
+    &#64;Autowired
+    CarrinhoCompras carrinho;
+
+    &#64;RequestMapping(value&#61;&#34;/finalizar&#34;, method&#61;RequestMethod.POST)
+    public ModelAndView finalizar(RedirectAttributes model){
+        System.out.println(carrinho.getTotal());
+        model.addFlashAttribute(&#34;sucesso&#34;, &#34;Pagamento Realizado com Sucesso&#34;);
+
+        return new ModelAndView(&#34;redirect:/produtos&#34;);
+    }
+}</code></pre>
+<p>Usamos como chave da mensagem o valor <code>sucesso</code>, porque na página de listagem dos produtos em <code>lista.jsp</code> já há um código responsável por exibir mensagens que venham com esta mesma chave. Lá deve haver uma linha código como esta:</p>
+<pre class="prettyprint"><code>&lt;p&gt; ${sucesso} &lt;/p&gt;</code></pre>
+<p>Agora queremos que ao clicar no botão de finalizar a compra, a requisição seja enviada para o <code>PagamentoController</code> e que o método <code>finaliza</code> seja chamado. Veja como está o botão de finalizar compra atualmente:</p>
+<pre class="prettyprint"><code>&lt;td colspan&#61;&#34;3&#34;&gt;
+    &lt;input type&#61;&#34;submit&#34; class&#61;&#34;checkout&#34; name&#61;&#34;checkout&#34; value&#61;&#34;Finalizar compra&#34; /&gt;
+&lt;/td&gt;</code></pre>
+<p>O botão é um <code>input</code>. Por questões de prática, vamos envolver este <code>input</code> com a tag <code>form</code>. Vamos definir o <code>action</code> deste formulário com a ajuda das tags do <strong>Spring</strong> (<code>s:mvcUrl</code>) e ajustar o atributo <code>method</code> para que seja post. Desta forma teremos:</p>
+<pre class="prettyprint"><code>&lt;form action&#61;&#34;${s:mvcUrl(&#39;PC#finalizar&#39;).build()}&#34; method&#61;&#34;post&#34;&gt;
+    &lt;input type&#61;&#34;submit&#34; class&#61;&#34;checkout&#34; name&#61;&#34;checkout&#34; value&#61;&#34;Finalizar compra&#34; /&gt;
+&lt;/form&gt;</code></pre>
+<p>Já que estamos usando <code>post</code> como médoto no formulário, vamos fazer com que o método <code>finalizar</code> receba apenas requisições <code>post</code>, pois não faz muito sentido recebermos uma requisição do tipo <code>get</code> neste contexto. Ajuste a assinatuda do médoto <code>finalizar</code> para que esta fique da seguinte forma:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(value&#61;&#34;/finalizar&#34;, method&#61;RequestMethod.POST)
+public ModelAndView finalizar(RedirectAttributes model){
+    System.out.println(carrinho.getTotal());
+
+    model.addFlashAttribute(&#34;sucesso&#34;, &#34;Pagamento Realizado com Sucesso&#34;);
+
+    return new ModelAndView(&#34;redirect:/produtos&#34;);
+}</code></pre>
+<p>Assim já poderemos fazer os testes necessários para saber se tudo que fizemos até o momento funciona. Inicie então o servidor e tente efetuar uma compra. Adicione alguns produtos ao carrinho e clique em <code>Finalizar Compra</code>.</p>
+<p>Ao iniciar nossa aplicação, teremos uma mensagem de erro:</p>
+<pre class="prettyprint"><code>Error creating bean with name &#39;carrinhoCompras&#39;: Scope &#39;session&#39; is not active for the current thread;</code></pre>
+<p>O <strong>Spring</strong> não conseguiu atribuir o carrinho de compras da sessão ao <code>PagamentoController</code>. Já vimos este problema antes na classe <code>CarrinhoComprasController</code> e resolvemos usando a anotação que muda o escopo do <strong><em>controller</em></strong>. Desta vez, resolveremos este problema de uma outra forma.</p>
+<p>Na classe <code>CarrinhoCompras</code>, usamos a anotação:</p>
+<pre class="prettyprint"><code>&#64;Scope(value&#61;WebApplicationContext.SCOPE_SESSION)</code></pre>
+<p>Passaremos para esta mesma anotação uma segunda informação definindo que o <strong>Spring</strong> criará um <strong><em>proxy</em></strong> envolvendo o objeto alvo (<code>TARGET_CLASS</code>) afim de possibilitar que as informações possam ser transitadas de um escopo para o outro. A anotação com a modificação proposta fica da seguinte forma:</p>
+<pre class="prettyprint"><code>&#64;Scope(value&#61;WebApplicationContext.SCOPE_SESSION, proxyMode&#61;ScopedProxyMode.TARGET_CLASS).</code></pre>
+<p>Assim conseguiremos fazer com que o carrinho de compras seja acessivel dentro dos <strong><em>controllers</em></strong> sem ter que mudar o escopo dos <strong><em>controllers</em></strong> para isso. Reinicie então o servidor e experimente fazer algumas compras.</p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_14_mensagem_de_sucesso.png" alt="Compra efetuada com sucesso" /></p>
+<p>Nosso próximo passo será fazer com que o link de remoção de produtos do carrinho funcione. Começaremos adicionando o <code>action</code> correto para esta finalidade na página <code>itens.jsp</code>. Nesta página procure pelo link de remoção que deve estar da seguinte forma:</p>
+<pre class="prettyprint"><code>&lt;td class&#61;&#34;remove-item&#34;&gt;
+    &lt;form action&#61;&#34;&#34; method&#61;&#34;post&#34;&gt;
+        &lt;input type&#61;&#34;image&#34; src&#61;&#34;/excluir.png&#34; alt&#61;&#34;Excluir&#34; title&#61;&#34;Excluir&#34; /&gt;
+    &lt;/form&gt;
+&lt;/td&gt;</code></pre>
+<p>Usaremos novamente as tags do <strong>Spring</strong> para esta tarefa. No <code>mvcUrl</code> criaremos uma url que aponte para o <code>CarrinhoComprasController</code> e chame o método <code>remover</code>. Este método precisará do <code>id</code> e o tipo de preço do produto, então o passaremos através do <code>arg</code> da seguinte forma:</p>
+<pre class="prettyprint"><code>&lt;td class&#61;&#34;remove-item&#34;&gt;
+    &lt;form action&#61;&#34;${s:mvcUrl(&#39;CCC#remover&#39;).arg(0, item.produto.id).arg(1,item.tipoPreco).build() }&#34; method&#61;&#34;post&#34;&gt;
+        &lt;input type&#61;&#34;image&#34; src&#61;&#34;/excluir.png&#34; alt&#61;&#34;Excluir&#34; title&#61;&#34;Excluir&#34; /&gt;
+    &lt;/form&gt;
+&lt;/td&gt;</code></pre>
+<p>Na classe <code>CarrinhoComprasController</code> precisamos adicionar o método <code>remover</code> que fará simplesmente uma chamada ao método <code>remover</code> da classe <code>CarrinhoCompras</code> passando o <code>id</code> do produto recebido e o tipo de preço do produto. Após isso, o método <code>remover</code> da classe <code>CarrinhoComprasController</code> criaremos um objeto do tipo <code>ModelAndView</code> para redirecionar o usuário para seu carrinho de compras. Em código teremos:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(&#34;/remover&#34;)
+public ModelAndView remover(Integer produtoId, TipoPreco tipoPreco){
+    carrinho.remover(produtoId, tipoPreco);
+    return new ModelAndView(&#34;redirect:/carrinho&#34;);
+}</code></pre>
+<p><strong>Observação</strong>: Note que estamos fazendo o mapeamento do método com a anotação <code>&#64;RequestMapping</code> com o valor <code>/produtos</code>.</p>
+<p>Para finalizar esta funcionalidade, precisamos fazer com que a classe <code>CarrinhoCompras</code> remova o produto da lista de itens. Lembre-se que os itens desta lista são objetos da classe <code>CarrinhoItem</code>. Sendo assim, precisamos criar um objeto <code>CarrinhoItem</code> que precisa de um objeto <code>Produto</code> e em <code>TipoPreco</code>.</p>
+<p>O objeto <code>TipoPreco</code> já esta sendo passado por parâmetro, mas o produto não. Estamos recebendo apenas o <code>id</code> do produto. Como fazer então? Poderíamos buscar este produto no banco de dados, mas na verdade, neste ponto, não precisamos disso. Neste caso em especifico, podemos criar um novo objeto <code>produto</code> e usar o método <code>setId</code> para definir o <code>id</code> do produto com o <code>id</code> recebido por parâmetro. Desta forma criamos um <code>carrinhoItem</code> e usamos o método <code>remove</code> do objeto <code>itens</code> na classe <code>CarrinhoCompras</code> passando este <code>carrinhoItem</code> criado. Vejamos como fica em código:</p>
+<pre class="prettyprint"><code>public void remover(Integer produtoId, TipoPreco tipoPreco) {
+    Produto produto &#61; new Produto();
+    produto.setId(produtoId);
+    itens.remove(new CarrinhoItem(produto, tipoPreco));
+}</code></pre>
+<p><strong>Observação</strong>: Lembre-se de que este método <code>remove</code> é para ser escrito na classe <code>CarrinhoCompras</code>.</p>
+<p>Faça alguns testes para verificar que tudo está funcionando. Reinicie o servidor, vá até lista de produtos, adicione alguns no carrinho de compras, remova alguns e finaliza a compra. Tudo deve estar funcionando sem problemas.</p>
+<h3>Realizando pagamento</h3>
+<p>Ao encerrar uma compra, é muito comum que as aplicações usem uma outra aplicação terceirizada para o processamento do pagamento. Aplicações como Paypal e PagSeguro são exemplos de sistemas que geralmente se usam para processar o pagamento da compra. Em nosso caso, usaremos uma pequena aplicação hospedada em <a href="http://book-payment.herokuapp.com/payment" rel="nofollow"></a><a href="http://book-payment.herokuapp.com/payment" rel="nofollow">http://book-payment.herokuapp.com/payment</a>.</p>
+<p>A aplicação de pagamento apresentada anteriormente serve para podermos verificar se os dados estão sendo enviados corretamente, ela não processa realmente o pagamento, mas simula a situação. Ela espera receber uma requisição do tipo <code>POST</code> enviando um <code>JSON</code> com o seguinte formato: <code>{&#34;value&#34;: 500}</code> onde no lugar do valor <code>500</code> enviaremos o valor da compra.</p>
+<p><strong>Observação</strong>: Esta aplicação limita o valor do pagamento a 500. Valores acima deste retornam uma mensagem de que o valor não é permitido.</p>
+<p>Para alguns testes pontuais, usaremos uma outra ferramenta para verificar algumas coisas, como por exemplo o tempo e a resposta em que a requisição ocorre e é respondida. No Google Chrome, você pode instalar uma extensão chamada DHC.</p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_14_dhc_requester.png" alt="Extensão DHC no Google Chrome" />  </p>
+<p>E no Mozilla Firefox você pode usar o HttpRequester:  </p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_14_http_requester.png" alt="HttpRequester no Firefox" />  </p>
+<p><strong>Observação</strong>: Note que as imagens mostram uma captura de tela das extensões com alguns testes realizados. Faça alguns também para ter certeza que está tudo funcionando corretamente.</p>
+<p>O problema agora é conseguir fazer com que a nossa aplicação consiga enviar uma requisição para outra aplicação. Não podemos redirecionar o navegador neste caso. O que precisamos fazer é chamado de integração, os sistemas se comunicam entre si de forma independente do navegador.</p>
+<p>Para a solução deste tipo de problema, o <strong>Spring</strong> nos disponibiliza uma classe com a qual podemos fazer as requisições que precisamos. Esta classe é a <code>RestTemplate</code>. Ela tem um método chamado <code>postForObject</code> que requer três parâmetros. O primeiro deles é a url na qual queremos enviar a requisição, o segundo é o objeto que representa a mensagem (o corpo) da requisição e por último uma classe na qual esperamos receber uma resposta do tipo.</p>
+<p>Vamos então fazer uso do <code>RestTemplate</code> em nossa classe <code>PagamentoController</code>. Crie um atributo deste tipo e o assine com a anotação <code>&#64;Autowired</code>.</p>
+<pre class="prettyprint"><code>&#64;Controller
+&#64;RequestMapping(&#34;/pagamento&#34;)
+&#64;Scope(value&#61;WebApplicationContext.SCOPE_REQUEST)
+public class PagamentoController {
+
+    &#64;Autowired
+    CarrinhoCompras carrinho;
+
+    &#64;Autowired
+    RestTemplate restTemplate;
+    [...]
+}</code></pre>
+<p>No método <code>finaliza</code> faremos o seguinte procedimento: Criar uma <code>String</code> que guardará a url para onde a requisição será enviada. Chamar o método <code>postForObject</code> do objeto <code>restTemplate</code> usando a <code>String</code> criada, um objeto da classe <code>DadosPagamento</code> (que ainda não temos mas vamos criar daqui a pouco) usando o valor total do carrinho e por último, dizer que esperamos uma resposta do tipo <code>String</code>, passando <code>String.class</code> como último parâmetro.</p>
+<pre class="prettyprint"><code>String url &#61; &#34;http://book-payment.herokuapp.com/payment&#34;;
+restTemplate.postForObject(url, new DadosPagamento(carrinho.getTotal()), String.class);</code></pre>
+<p>Já que se é esperada uma resposta da requisição enviada, vamos atribuir o resultado deste método a um objeto <code>String</code> que chamaremos de <code>response</code> e usa-lo para exibir a mensagem recebida tanto no console, quanto na <em>view</em>. Veja o método finaliza como fica ao final:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(value&#61;&#34;/finalizar&#34;, method&#61;RequestMethod.POST)
+public ModelAndView finalizar(RedirectAttributes model){
+
+    String uri &#61; &#34;http://book-payment.herokuapp.com/payment&#34;;
+    String response &#61; restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
+
+    model.addFlashAttribute(&#34;message&#34;, response);
+    System.out.println(response);
+
+    return new ModelAndView(&#34;redirect:/produtos&#34;);
+}</code></pre>
+<p>Agora precisamos criar a classe <code>DadosPagamento</code> que deve receber o valor da compra e guardar em um atributo do tipo <code>BigDecimal</code>. Veja como fica simples esta classe:</p>
+<pre class="prettyprint"><code>public class DadosPagamento {
+    private BigDecimal value;
+
+    public DadosPagamento(BigDecimal value) {
+        this.value &#61; value;
+    }
+
+    public DadosPagamento() {
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+}</code></pre>
+<p>Lembre-se de criar esta classe dentro do pacote de modelos. Observe que o nome do atributo é o mesmo que o sistema de pagamentos espera receber. Isto é necessário pois o <strong>Spring</strong> irá transformar o objeto desta classe em um objeto <code>JSON</code>. Por padrão ele irá criar a chave com o nome do atributo da classe e o valor será o mesmo do definido no atributo.</p>
+<p>Para podermos testar, nos falta apenas criar uma configuração básica para que o <strong>Spring</strong> consiga criar o objeto <code>RestTemplate</code> corretamente. Para isso criaremos um novo método na classe <code>WebAppConfiguration</code> anotado com <code>&#64;Bean</code> e que apenas retorna um objeto do tipo <code>RestTamplate</code>.</p>
+<pre class="prettyprint"><code>&#64;EnableWebMvc
+&#64;ComponentScan(basePackageClasses&#61;{HomeController.class, ProdutoDAO.class, FileSaver.class, CarrinhoCompras.class})
+public class AppWebConfiguration {
+    [...]
+
+    &#64;Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
+
+}</code></pre>
+<p>Agora podemos testar nossa aplicação. Inicie o servidor e efetue o processo de compra, vá até a listagem de produtos, adicione alguns ao carrinho e clique em <code>Finalizar Compra</code>. E veja o que acontece:</p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_14_HttpMessageConverter_not_found.png" alt="HTTP Status 500 - Request processing failed" /></p>
+<p>Obtemos um erro 500 ao finalizar a compra. Por que? Veja o que diz a mensagem de erro:</p>
+<pre class="prettyprint"><code>Could not write request: no suitable HttpMessageConverter found for request type [br.com.casadocodigo.loja.models.DadosPagamento]</code></pre>
+<p>O <strong>Spring</strong> não conseguiu transformar o objeto da classe <code>DadosPagamento</code> em <code>JSON</code>. Veja que ele pede por um <code>HttpMessageConverter</code>. Perceba que mesmo o <strong>Spring</strong> se encarregando de fazer a conversão do objeto de <code>DadosPagamento</code> para <code>JSON</code> não dissemos em lugar nenhum como ele deve fazer isto. Existe uma biblioteca que já faz essa tarefa, esta biblioteca se chama <strong><em>jackson</em></strong>. Vamos utilizá-la.</p>
+<p>Abra seu <code>pom.xml</code> e adicione as seguintes dependencias:</p>
+<pre class="prettyprint"><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+    &lt;artifactId&gt;jackson-core&lt;/artifactId&gt;
+    &lt;version&gt;2.5.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+    &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+    &lt;version&gt;2.5.1&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p>Salve seu <code>pom.xml</code> e atualize o projeto. Tente iniciar e refazer o processo de compra. Tudo deve funcionar normalmente. Mas veja o que acontece quando testamos com um valor acima de 500.</p>
+<p><img src="https://s3.amazonaws.com/caelum-online-public/SpringMVC&#43;-&#43;criando&#43;webapp/springmvc_i_webaapp_14_bad_request.png" alt="Bad Request Error - valor acima do permitido" /></p>
+<p>Recebemos um erro do tipo <code>Bad Request</code>. Lembre-se que o sistema de pagamentos que estamos simulando retorna um erro de número 400 do <code>HTTP</code> quando o valor excede o valor de 500. Para que essa mensagem de erro seja mostrada para o usuário, vamos fazer uso de um bloco <code>try/catch</code> e caso aconteça o erro, mostraremos uma mensagem amigável. Veja como ficará o método <code>finaliza</code> da classe <code>PagamentoController</code>:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(value&#61;&#34;/finalizar&#34;, method&#61;RequestMethod.POST)
+public ModelAndView finalizar(RedirectAttributes model){
+
+    try {
+        String uri &#61; &#34;http://book-payment.herokuapp.com/payment&#34;;
+        String response &#61; restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
+        model.addFlashAttribute(&#34;sucesso&#34;, response);
+        System.out.println(response);
+        return new ModelAndView(&#34;redirect:/produtos&#34;);
+    } catch (HttpClientErrorException e) {
+        e.printStackTrace();
+        model.addFlashAttribute(&#34;falha&#34;, &#34;Valor maior que o permitido&#34;);
+        return new ModelAndView(&#34;redirect:/produtos&#34;);
+    }
+}</code></pre>
+<p>Com esta adição em nosso código, paramos de exibir a mensagem de erro do próprio <strong>Spring</strong> e passamos a exibir uma mensagem mais amigável ao usuário.Lembre-se de exibir a mensagem de falha através de <code>${falha}</code> no arquivo <code>lista.jsp</code>. Onde se encontra a listagem dos produtos.</p>
+<h3>Fazendo requisições assíncronas.</h3>
+<p>O comportamento padrão da nossa aplicação atualmente tem um problema bem comum em diversas aplicações do gênero. Perceba que ao finalizar uma compra a aplicação envia os dados de pagamento para um outro sistema e fica aguardando uma resposta. Enquanto aguarda uma reposta a aplicação simplesmente para. Isto porque ela executa em uma única <strong><em>thread</em></strong>.</p>
+<p>Atualmente como estamos fazendo poucas operações ao finalizar uma compra, isso pode não aparentar um problema, mas em um sistema real será, pois ao finalizar uma compra, geralmente a operação envolve envio de emails, confirmação de pagamento por terceiros e registro da compra. Juntando essa quantidade de atividades a um possível grande número de usuários acessando o sistema, teremos problemas com um sistema lento que pode trazer diversos outros problemas como queda nas vendas por exemplo.</p>
+<p>Pensando nisso, podemos fazer uma pequena otimização na funcionalidade de finalização da compra. Faremos com que ao o usuário finalizar uma compra a requisição seja feita de forma assíncrona e que somente este usuário aguarde a resposta do processamento. Desta forma os demais usuários continuam usando a aplicação sem nenhum problema.</p>
+<p>Para implementarmos essa modificação, precisamos apenas modificar a assinatura do método <code>finalizar</code> na classe <code>PagamentoController</code> para que retorne um objeto <code>Callable</code> do tipo <code>ModelAndView</code>. Veja como fazemos isso:</p>
+<pre class="prettyprint"><code>&#64;RequestMapping(value&#61;&#34;/finalizar&#34;, method&#61;RequestMethod.POST)
+public Callable&lt;ModelAndView&gt; finalizar(RedirectAttributes model){
+    return () -&gt; {
+        try {
+            String uri &#61; &#34;http://book-payment.herokuapp.com/payment&#34;;
+            String response &#61; restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
+            model.addFlashAttribute(&#34;message&#34;, response);
+            System.out.println(response);
+            return new ModelAndView(&#34;redirect:/produtos&#34;);
+        } catch (HttpClientErrorException e) {
+            e.printStackTrace();
+            model.addFlashAttribute(&#34;message&#34;, &#34;Valor maior que o permitido&#34;);
+            return new ModelAndView(&#34;redirect:/produtos&#34;);
+        }
+    };
+}</code></pre>
+<p><strong>Observação</strong>: Observe que estamos usando novamente recursos do Java 8. Esta forma de usar <strong><em>lambda</em></strong> nos permite criar um objeto do mesmo tipo esperado pelo retorno do método, evitando que criemos uma classe anônima. Neste caso é perfeitamente aplicável o recurso, por que na interface <code>Callable</code> só há um método, de nome <code>call</code>.</p>
+<p>Conheça mais sobre Java 8 fazendo o curso disponível aqui no Alura. <a href="https://cursos.alura.com.br/course/java8-lambdas" rel="nofollow">Clique aqui para ver o curso</a></p>
+<p>A otimização feita não poderá ser analisada em ambiente local como estamos desenvolvendo, mas sim acompanhando o dia a dia da aplicação, com muitos usuários e requisições transitando pela aplicação. Mas é possivel fazer alguns testes através do JMetter, uma ferramenta para testes de performace. Leia mais sobre o JMetter na documentação do mesmo em: <a href="http://jmeter.apache.org/" rel="nofollow"></a><a href="http://jmeter.apache.org/" rel="nofollow">http://jmeter.apache.org/</a>.</p>
+
+		</div>
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+				
+
+
+
+<section class="task-actions">
+	<div class="container">
+		
+
+
+
+
+
+<a href="/forum/curso-spring-mvc-1-criando-aplicacoes-web/exercicio-finalizando-o-carrinho/11490/novo" class=" task-actions-button task-actions-button-forum" data-amplitude-onsubmit='{"name":"help-needed","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11490","task-kind":"Explicação"}'>Tirar Dúvida</a><!--
+		 --><a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11490/next" class="task-actions-button task-body-actions-button task-actions-button-next">Próxima Atividade</a>
+	</div>
+</section>
+			
+		</main>
+	</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+<aside class="task-menu">
+	<section class="task-menu-header">
+		<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class='openMenu-button task-menu-button '></button>
+		<div class="task-menu-header-info">
+			<a class="task-menu-header-info-title" href="/course/spring-mvc-1-criando-aplicacoes-web" title="Ir para página do curso">
+				<img src="https://www.alura.com.br/assets/api/cursos/spring-mvc-1-criando-aplicacoes-web.svg" alt="ícone Spring MVC I: Criando aplicações web" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px"/>
+				<h2 class="task-menu-header-info-title-text">Spring MVC I: Criando aplicações web</h2>
+			</a>
+			<div class="task-menu-header-info-progress">
+				
+				<span class="task-menu-header-info-progress-percentage ">97%</span>
+				<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 97%, transparent 97%);"></span>
+			</div>
+		</div>
+	</section>
+	
+	<section class="task-menu-section">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>14</strong>
+				<span>de 14</span></span>
+			<h3 class="task-menu-section-title-text">
+				Finalizando o carrinho
+			</h3>
+		</div>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			Atividades
+			<span>4 de 9</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11487" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO" />
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Vídeo 1">
+							Vídeo 1
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">20min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11488" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO" />
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Vídeo 2">
+							Vídeo 2
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">18min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11489" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO" />
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Vídeo 3">
+							Vídeo 3
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">06min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11490" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION" />
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Finalizando o carrinho">
+							Finalizando o carrinho
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11491" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Criando o controle de pagamentos">
+							Criando o controle de pagamentos
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11492" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">06</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Arrumando o escopo do carrinho">
+							Arrumando o escopo do carrinho
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11493" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">07</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Removendo um produto do carrinho">
+							Removendo um produto do carrinho
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11494" class="task-menu-nav-item-link task-menu-nav-item-link-TEXT_CONTENT">
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Atividade sem Resposta do Aluno concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#TEXT_CONTENT" />
+					</svg>
+					<span class="task-menu-nav-item-number">08</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Adicionando o jackson para o nosso projeto">
+							Adicionando o jackson para o nosso projeto
+						</span>
+						
+					</a>
+				</li>
+			
+				<li class="task-menu-nav-item ">
+					<a href="/course/spring-mvc-1-criando-aplicacoes-web/task/11495" class="task-menu-nav-item-link task-menu-nav-item-link-OPEN_QUESTION">
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Exercício Aberto não concluída">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#OPEN_QUESTION" />
+					</svg>
+					<span class="task-menu-nav-item-number">09</span>
+					<span class="task-menu-nav-item-text" >
+						<span class="task-menu-nav-item-title" title="Consumindo um serviço">
+							Consumindo um serviço
+						</span>
+						
+					</a>
+				</li>
+			
+		</ul>
+	</nav>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aulas
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href='/course/spring-mvc-1-criando-aplicacoes-web/section/'+this.value;">
+			
+				<option value="1" >01. Começando com SpringMVC</option>
+			
+				<option value="2" >02. Cadastro de produtos</option>
+			
+				<option value="3" >03. Cadastro de preços do produto</option>
+			
+				<option value="4" >04. Listando os produtos</option>
+			
+				<option value="5" >05. Redirect com Escopo de Flash</option>
+			
+				<option value="6" >06. Validação e conversão de dados</option>
+			
+				<option value="7" >07. Mais Validações </option>
+			
+				<option value="8" >08. Formatação de datas</option>
+			
+				<option value="9" >09. Enviando arquivos ao servidor</option>
+			
+				<option value="10" >10. Url amigáveis</option>
+			
+				<option value="11" >11. Expondo atributos no jsp</option>
+			
+				<option value="12" >12. Escopo sessão</option>
+			
+				<option value="13" >13. Carrinho de compras</option>
+			
+				<option value="14" selected>14. Finalizando o carrinho</option>
+			
+		</select>
+	</section>
+	<section class="task-menu-others">
+		<h2 class="task-menu-others-title ">
+			Outros Links
+		</h2>
+		<a href="/forum/curso-spring-mvc-1-criando-aplicacoes-web/todos" class="task-menu-others-link task-menu-others-link-forum " title="Ir para o fórum do curso">Fórum</a>
+		<a href="/dashboard" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
+	</section>
+	<section class="task-menu-footer">
+		<a class="task-menu-footer-user" href="/user/altair-lage" title="Ir para sua página de usuário">
+			<img src="https://www.gravatar.com/avatar/846d7bad034e3c292bc8e433e11b4683.png?r=PG&size=60x60&d=https%3A%2F%2Fcursos.alura.com.br%2Fimages%2Fforum%2Favatar_a.png" alt="Gravatar de Altair Lage" class="task-menu-footer-img" width="40px" height="40px"/>
+			
+				<p class="task-menu-footer-detalhes">
+					<span class="task-menu-footer-detalhes-nome">Altair Lage</span>
+					<span class="task-menu-footer-detalhes-xp">
+						39.2k xp
+					</span>
+				</p>
+			
+			<input type="hidden" value="" />
+			<input type="hidden" value="" />
+		</a>
+		<a href="/dashboard" class="task-menu-footer-logo">
+			<img src="/images/gnarus/classPage/icon-menu-alura.svg" alt="Logo da Alura" class="task-menu-footer-logo-image" width="19px" height="32px" title="Ir para a página principal" />
+		</a>
+	</section>
+</aside>
+</section>
+
+
+
+
+	<script src="/script/lib/jquery2/jquery-2.1.3.min.32015dd4.js"></script>
+	<script src="/script/gnarus/block/buttonToggle.83185c05.js" async></script>
+	<script src="/script/gnarus/block/sectionMenu.ba849510.js" async></script>
+
+	<script src="/script/lib/marked.98ce0051.js"></script>
+	<script src="/script/gnarus/block/markdownEditor.f940de44.js" async></script>
+	<script src="/script/gnarus/block/caret.637d95c2.js" async></script>
+	<script src="/js/gnarus/keydownWatchers.67f33811.js" async></script>
+	<script src="/js/prettify.4992e3fe.js" async></script>
+
+	<script src="/script/gnarus/block/preventsDoubleClick.0a7a943f.js" async></script>
+	<script src="/script/gnarus/block/assessment.050f656f.js" async></script>
+	<script src="/script/gnarus/block/login-form.1730703f.js" async></script>
+	<script src="/script/gnarus/classPage/classPage.85152a83.js"></script>
+	<script src="/script/gnarus/classPage/aria.a0feb01e.js"></script>
+	<script src="/script/gnarus/classPage/phrase.80dcd2b8.js"></script>
+	<script src="/script/gnarus/classPage/feedback.2d335882.js"></script>
+	
+	
+
+	
+	
+	
+	
+
+	<script src="/script/musicdot/partitura.977fb5b2.js"></script>
+	<script src="/script/gnarus/classPage/audioProgress.6f445a1c.js"></script>
+
+	
+	
+	
+		
+
+<script type="text/javascript" src="/js/amplitude.f1f6e4b7.js"></script>
+
+<script>
+
+	amplitudeInit("84647047775d06b4051d80eccd387bd3");
+	
+	
+		var userProperties = {"name":"Altair Lage","email":"altair.lage@datablink.com"};
+		amplitudeIdentify("75042", userProperties);
+	
+	
+	
+
+	
+	
+	$('[data-amplitude]').on('click', function(){
+		var data = $(this).data().amplitude;
+		track(data);
+	});
+	
+</script>
+
+		
+		
+			<script>
+				track({"name":"task-seen","course-code":"spring-mvc-1-criando-aplicacoes-web","task-id":"11490","task-kind":"Explicação"});
+			</script>
+		
+	
+	
+ 
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"b5f9030682","agent":"","beacon":"bam.nr-data.net","applicationTime":54,"applicationID":"12544460","transactionName":"ZVFTNhEEXEdTWkdeV1wbchcQEV1ZHVtBGVtdWR8BAgBeQV8XVFlZQEFCTAsEQFhXQEJCUVxaHwEMC0ZGXVVfUkocZ1QBFwxdWnFWXUNKXVhdBxFKQVxdTmdWS1k=","queueTime":0}</script></body>
+</html>

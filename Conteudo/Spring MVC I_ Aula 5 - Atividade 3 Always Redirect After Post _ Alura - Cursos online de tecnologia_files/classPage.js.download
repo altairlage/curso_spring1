@@ -1,0 +1,363 @@
+var Task = (function(){
+
+	function getCommonData(task){
+		var taskId = task.data('task-id');
+		var authorId = task.data('author-id');
+
+		return {
+				'task.id' : taskId
+				,'answer.author.id' : authorId
+			};
+	}
+
+	function showOpinionIfAvailable() {
+		var feedback = $('.task-feedback');
+		var actions = $('#task-content .task-actions');
+		var answer = $('.markdownEditor, .openQuestion-answer-title');
+		$('.task-actions').show();
+		if (feedback.length > 0) {
+			actions.addClass('screenReader-only');
+			$('.screenReader-only .task-actions-button-forum').hide();
+			if(answer.length > 0){
+				answer.hide();
+			}
+			feedback.addClass('task-feedback--visible');
+			feedback.attr('aria-hidden', 'false');
+			sticky.recalc();
+		}
+		enableButton();
+	}
+
+	function showError(jqXHR, textStatus, errorThrown){
+		var newDoc = document.open("text/html", "replace");
+		newDoc.write(jqXHR.responseText);
+		newDoc.close();
+	};
+
+	function disableButton(){
+		var button = $('.task-body-actions-button.task-actions-button-answer');
+		button.addClass('task-actions-button-spinning');
+		button.prop('disabled', true);
+	}
+
+	function enableButton(){
+		var button = $('.task-body-actions-button.task-actions-button-answer');
+		button.removeClass('task-actions-button-spinning');
+		button.prop('disabled', false);
+	}
+
+	function toggleChoiceableOpinion(){
+		$('.choiceable-opinion').css('display', 'block');
+	}
+
+	var task = $('.task');
+	var taskType = task.data('task-type');
+	var courseCode = task.data('course-code');
+	var sectionNumber = task.data('section-number');
+
+	function submitAnswer(answerCallback, additionalData) {
+		if(!task.data('hasfeedbackanswer')){
+            disableButton();
+		}
+
+		var data = getCommonData(task);
+		if (taskType == 'repetition') {
+			var repeatable = $('.repetition');
+			taskType = repeatable.data('repeatable-type');
+			courseCode = task.data('course-code');
+			sectionNumber = task.data('section-number');
+			data = getCommonData(repeatable);
+			data['answer.fromRepetition'] = true;
+		}
+
+		if(taskType == 'singlechoice'){
+			var alternative = $('.alternativeList-item-input:checked');
+			data.alternativeId = alternative.attr('id');
+			toggleChoiceableOpinion();
+		} else if (taskType == 'multiplechoice'){
+			var alternatives = $('.alternativeList-item-input:checked');
+			alternatives.each(function(index){
+				data["answer.alternatives["+index+"].id"] = $(this).attr("id");
+			});
+			toggleChoiceableOpinion();
+		} else if (taskType == 'openquestion'){
+			data["answer.answeredText"] = $('.markdownEditor-textArea').val();
+		} else if (taskType == 'fillintheblank'){
+            var answer = $('.phrase-input').val();
+			data["answer.answeredText"] = answer;
+		} else if (taskType == 'speakingpractice' || taskType == 'pronunciationpractice') {
+			data["answer.feedback"] = additionalData;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: "/course/"+courseCode+"/section/"+sectionNumber+"/"+taskType+"/answer",
+			data: data,
+			success: answerCallback ? answerCallback : showOpinionIfAvailable,
+			error: showError
+		});
+
+	};
+
+	return {submitAnswer : submitAnswer, showOpinionIfAvailable : showOpinionIfAvailable, toggleChoiceableOpinion: toggleChoiceableOpinion, enableButton : enableButton};
+})();
+
+var Choiceable = (function(){
+	function setup(){
+		$('.alternativeList-item-opinionButton').on('click', function(e){
+			e.preventDefault();
+			var li = $(this).parents('li');
+			li.toggleClass('alternativeList-item--active');
+			Aria.expandingButton($(this));
+		});
+	};
+
+	function updateSubmitAnswerIf(isCorrect) {
+		if(isCorrect) {
+			$('#task-content').attr('data-should-submit-answer', false);
+		}
+	};
+
+	function isChecked(label){
+		return label.hasClass('alternativeList-item--checked');
+	};
+
+	function isOpinionIcon(e){
+		return e.target.classList.contains('alternativeList-item-opinionIcon-use') ||
+		e.target.classList.contains('alternativeList-item-opinionIcon');
+	};
+
+	function showAlternativeOpinions(){
+		var checkedAlternatives = $('.alternativeList-item--checked');
+		checkedAlternatives.each(function(){
+			var item = $(this);
+			var hasOpinion = item.find('.alternativeList-item-opinionIcon').length > 0;
+			if(hasOpinion){
+				item.addClass('alternativeList-item--active');
+				var button = item.find('.alternativeList-item-opinionButton');
+				Aria.expandingButton(button);
+			}
+			if(item.data("correct"))
+				$('.singleChoice-alternative-aria-feedback').text('Alternativa correta');
+			else
+				$('.singleChoice-alternative-aria-feedback').text('Alternativa incorreta');
+			
+		});
+		sticky.recalc();
+	}
+
+	function showAlternativeOpinionsAndNextButton(){
+		$('.alternativeList-item-opinionButton').each(function(){
+			var svg = $(this)[0];
+			if(!svg.classList.contains('alternativeList-item-opinionButton--visible')){
+			 	svg.classList.add('alternativeList-item-opinionButton--visible');
+			}
+		});
+		$('.task-actions').css('display', 'block');
+		$('.task-actions-button-next').css('display', 'inline-block');
+		sticky.recalc();
+	};
+
+	function toggleLabelClass(label){
+		label.toggleClass('alternativeList-item--checked');
+	};
+
+	function disableAllAlternatives(){
+		var alternatives = $('.alternativeList-item-input');
+		alternatives.each(function(){
+			$(this).attr('disabled', 'true');
+		});
+		$('.alternativeList-item-span').addClass('alternativeList-item-span-disabled');
+	};
+
+	function submitAmplitudeTaskAnswered(){
+		var data = $('[data-amplitude]').data().amplitude;
+		//defined in amplitude.js
+		track(data);
+	}
+
+	return {
+		setup : setup,
+		updateSubmitAnswerIf : updateSubmitAnswerIf,
+		isChecked : isChecked,
+		isOpinionIcon : isOpinionIcon,
+		showAlternativeOpinionsAndNextButton : showAlternativeOpinionsAndNextButton,
+		toggleLabelClass : toggleLabelClass,
+		showAlternativeOpinions : showAlternativeOpinions,
+		disableAllAlternatives : disableAllAlternatives,
+		showAlternativeOpinionsAndNextButton : showAlternativeOpinionsAndNextButton,
+		submitAmplitudeTaskAnswered : submitAmplitudeTaskAnswered
+	};
+
+})();
+
+(function(){
+
+	var task = $(".task");
+	var domain = task.data("domain");
+	var buttons = $('.openMenu-button');
+    var shouldMoveOn = false;
+    var hasAnswer = false;
+    var textCode;
+    var codeEditor;
+
+
+    function setMenuCookie(){
+		var menuCookie = "gnarus.menuClosed=" + task.hasClass("menu--inactive") + "; path=/; domain=" + domain;
+		document.cookie = menuCookie;
+	}
+
+	function contentHasChanged() {
+		return shouldMoveOn || (codeEditor != undefined && codeEditor.getValue() != textCode);
+    }
+
+	$(".task-menu-button, .task-body-button").on('click', function(e){
+		e.stopPropagation();
+		task.toggleClass("menu--inactive");
+		buttons.toggleClass("openMenu-button--inactive");
+		setMenuCookie();
+		sticky.recalc();
+	});
+
+	$(".task-submit").on('click', function (e){
+		var shouldWarn = $(".task-body-main").data('should-warn')
+		if (shouldWarn && contentHasChanged() && !hasAnswer) {
+			var answer = window.confirm("Suas alterações ainda não foram salvas, clique em Responder para salvá-las. Deseja ir para a próxima aula?");
+            if (answer == false) {
+                e.preventDefault();
+            }
+        }
+	});
+
+    $('.markdownEditor-textArea, .phrase-input').on("change", function () {
+		shouldMoveOn = true;
+	});
+
+	$('.task-actions-button-answer').on("click", function () {
+		hasAnswer = true;
+    });
+	
+	$(document).click(function(event) {
+		if($(window).width() < 768){
+		    if(!$(event.target).closest('.task-menu-button').length && !$(event.target).closest('.task-menu').length && !$(event.target).closest('.settings-box').length) {
+		        task.addClass("menu--inactive");
+		        buttons.addClass("task-menu-button--inactive");
+				setMenuCookie();
+		    }
+		}
+	});
+
+	$('.task-menu-section-title,.task-menu-nav,.task-menu-sections').on('click', function(e){
+		task.removeClass("menu--inactive");
+		buttons.removeClass("task-menu-button--inactive");
+	});
+
+	$('.settings-button').on('click',function(e){
+		e.stopPropagation();
+		$(this).toggleClass('settings-button--active');
+	});
+
+	$('html').click(function() {
+		$('.settings-button').removeClass('settings-button--active');
+	});
+
+	$(window).load(function(){
+		var checkedAlternatives = $('.alternativeList-item--checked');
+		if(checkedAlternatives.size() > 0){
+			Task.toggleChoiceableOpinion();
+			Choiceable.showAlternativeOpinions();
+			Choiceable.showAlternativeOpinionsAndNextButton();
+		}
+	});
+
+    $('.task-actions-button-answer').on('click', function(){
+		$(this).attr('aria-expanded', 'true');
+	});
+
+	$('[data-submittable=true]').on('click', function() {
+		Task.submitAnswer();
+	});
+
+	$('.task-actions-button-showOpinion').on('click', function() {
+		Task.showOpinionIfAvailable();
+	});
+
+	$('.task-actions-button-forum').on('click', function() {
+		var trackingData = $(this).data('amplitude-onsubmit');
+		track(trackingData);
+	});
+	
+})();
+
+var sticky = (function(){
+    var menu = document.querySelector('.task-menu');
+    var content = document.querySelector('.task-body');
+  
+    // feature detection
+    if (!('scrollY' in window || 'pageYOffset' in window) || !('requestAnimationFrame' in window)) {
+      menu.style.position = 'absolute';
+      return; // abortar
+    }
+    
+    // calcula valores estaticos de tamanho de tela e tamanho do menu
+    var menuHeight, screenHeight, contentHeight;
+    function recalc() {
+      menuHeight = menu.getBoundingClientRect().height;
+      screenHeight = window.innerHeight;
+      contentHeight = content.getBoundingClientRect().height;
+    }
+
+    window.addEventListener('resize', recalc);
+    setTimeout(recalc, 0);
+    setTimeout(recalc, 200); // safari bizarro precisa desse atraso
+
+    // controle de quanto ja scrollei e quanto menu ja deslocou
+    var scroll = window.scrollY || window.pageYOffset;
+    var translateAnterior = 0;
+    
+    // calcula a nova posicao do menu
+    function update() {
+      var novoScroll = window.scrollY || window.pageYOffset;
+      if (scroll == novoScroll || novoScroll < 0) return;
+
+      // safari estoura o scrollMax, por isso calculamos
+      var scrollMax = document.documentElement.offsetHeight - screenHeight;
+      if(novoScroll > scrollMax) return;
+     
+      var translate = Math.max(
+        Math.min(
+          translateAnterior + novoScroll - scroll, // scroll normal
+          menuHeight - screenHeight // quando chega embaixo
+        ),
+        0 // ancora o topo em 0
+      );
+
+      // safari precisa disso qdo scroll começa antes de calcular os tamanhos
+      if (isNaN(translate)) return;
+      
+      if (translate != translateAnterior) {
+        menu.style.transform = 'translateY(' + (-translate) + 'px)';
+        translateAnterior = translate;
+      }
+
+      scroll = novoScroll;
+    }
+  
+    // teste de pegar scroll a cada frame ao inves do onscroll
+    function exec() {
+       if(menuHeight > contentHeight || window.innerWidth <= 691){
+          menu.style.position = 'absolute';
+    	}else{
+    		menu.style.position = 'fixed';
+    		update();
+    	}
+      requestAnimationFrame(exec);
+    }
+    requestAnimationFrame(exec);
+  
+    // teste com onscroll
+    // window.addEventListener('scroll', update);
+
+    return {recalc : recalc};
+})();
+

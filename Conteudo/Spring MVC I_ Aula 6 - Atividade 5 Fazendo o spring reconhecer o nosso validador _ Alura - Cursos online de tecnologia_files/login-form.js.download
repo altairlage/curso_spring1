@@ -1,0 +1,39 @@
+var loginForm = {
+	getHashFromUrl : function(url) {
+		var a = document.createElement("a");
+		a.href = url;
+		return a.hash.replace(/^#/, "");
+	},
+	
+	clickForgot : function() {
+		$('.signin').toggle();
+		$('.forgotPassword').css("display", "inline-block");
+		return false;
+	},
+	
+	init : function() {
+		$(".forgotPassword-link").click(this.clickForgot);
+		var hash = this.getHashFromUrl(document.URL);
+		if (hash == "forgot") {
+			this.clickForgot();
+			$(".forgot-password-email").focus();
+		} else {
+			$("#email").focus();
+		}
+		this.fillEmail();
+	},
+	
+	emailOnCookie : function() {
+		return localStorage.aluraEmail || null;
+	},
+	
+	fillEmail: function() {
+		if(this.emailOnCookie() != null){
+			$(".fill-with-cached-email").val(this.emailOnCookie());
+		}
+	
+	}
+};
+$(document).ready(function() {
+	loginForm.init();
+});

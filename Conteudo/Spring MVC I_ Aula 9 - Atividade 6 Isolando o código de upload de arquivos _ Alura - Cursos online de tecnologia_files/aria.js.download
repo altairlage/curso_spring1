@@ -1,0 +1,14 @@
+var Aria = (function(){
+
+    function expandingButton(button){
+        var ariaExpanded = (button.attr("aria-expanded")) === 'true';
+        button.attr("aria-expanded", !ariaExpanded);
+
+        console.log(button.attr("aria-expanded"));
+
+        var ariaControl = button.attr("aria-controls");
+
+        $('#'+ariaControl).attr("aria-hidden", ariaExpanded);
+    }
+    return {expandingButton : expandingButton};
+})();

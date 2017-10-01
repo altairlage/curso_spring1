@@ -1,0 +1,23 @@
+(function(Task) {
+        $('.buttonFeedback').on('click', function(){
+          var feedback = $(this).data('feedback');
+          Task.submitAnswer(redirect, feedback);
+        });
+        var task = $('.task');
+        var courseCode = task.data('course-code');
+        var taskId = task.data('task-id');
+
+        function redirect() {
+
+            var redirectUrl = getRedirectUrl();
+            $(location).attr('href', redirectUrl);
+        }
+
+        function getRedirectUrl() {
+            if (task.data("task-type") == 'repetition') {
+                return $(location).attr('href');
+            }
+            return "/course/" + courseCode + "/task/" + taskId + "/next";
+        }
+    }
+)(Task);
